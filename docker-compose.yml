@@ -1,0 +1,20 @@
+services:
+  test:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: regulatory-duty-test:latest
+    container_name: regulatory-duty-test
+    # No bind mounts — tests run against the image copy for reproducibility.
+
+  test-local:
+    profiles: ["local"]
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: regulatory-duty-test:latest
+    container_name: regulatory-duty-test-local
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: ["./scripts/docker-test.sh"]

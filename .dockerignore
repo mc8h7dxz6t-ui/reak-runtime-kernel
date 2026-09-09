@@ -1,0 +1,12 @@
+.git
+**/.pytest_cache
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.sqlite
+**/*.sqlite-wal
+**/*.sqlite-shm
+landlord-duty/data/
+landlord-duty/exports/
+landlord-duty/replay/
+**/.DS_Store
