@@ -5,3 +5,5 @@ Architecture for governing consequential software actions on external systems th
 The frozen design is [ARCHITECTURE.md](ARCHITECTURE.md). It is the programme: philosophy, duties, state machine, execution and evidence, recovery, qualification, and the hostile review that justified the freeze.
 
 This repository is a design freeze, not a runtime yet. Implementation starts from the duties and invariants in that document.
+
+[EVIDENCELAB.md](EVIDENCELAB.md) is a separate constitutional specification for an independent evidence and qualification lab. It does not extend the runtime design.
