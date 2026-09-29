@@ -13,3 +13,5 @@ This repository is a design freeze, not a runtime yet. Implementation starts fro
 [CCS.md](CCS.md) is the conformance suite for that contract. It defines how clauses are falsified. It does not add obligations.
 
 [ROADMAP-QUALIFICATION.md](ROADMAP-QUALIFICATION.md) is the qualification board's decision on whether implementation planning replaces further architectural debate.
+
+[TRACEABILITY.md](TRACEABILITY.md) maps each frozen constitutional article to CCS scenarios, evidence, and ownership. It does not add articles or components.
