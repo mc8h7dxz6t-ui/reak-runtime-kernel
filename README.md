@@ -9,3 +9,5 @@ This repository is a design freeze, not a runtime yet. Implementation starts fro
 [EVIDENCELAB.md](EVIDENCELAB.md) is a separate constitutional specification for an independent evidence and qualification lab. It does not extend the runtime design.
 
 [CONSTITUTION.md](CONSTITUTION.md) is the review-board contract that survives both designs. Implementations are candidates. The contract is the obligation.
+
+[CCS.md](CCS.md) is the conformance suite for that contract. It defines how clauses are falsified. It does not add obligations.
