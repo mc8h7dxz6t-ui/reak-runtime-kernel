@@ -15,3 +15,5 @@ This repository is a design freeze, not a runtime yet. Implementation starts fro
 [ROADMAP-QUALIFICATION.md](ROADMAP-QUALIFICATION.md) is the qualification board's decision on whether implementation planning replaces further architectural debate.
 
 [TRACEABILITY.md](TRACEABILITY.md) maps each frozen constitutional article to CCS scenarios, evidence, and ownership. It does not add articles or components.
+
+[IQ-009.md](IQ-009.md) is the qualification verdict for IQ-009.
