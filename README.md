@@ -11,3 +11,5 @@ This repository is a design freeze, not a runtime yet. Implementation starts fro
 [CONSTITUTION.md](CONSTITUTION.md) is the review-board contract that survives both designs. Implementations are candidates. The contract is the obligation.
 
 [CCS.md](CCS.md) is the conformance suite for that contract. It defines how clauses are falsified. It does not add obligations.
+
+[ROADMAP-QUALIFICATION.md](ROADMAP-QUALIFICATION.md) is the qualification board's decision on whether implementation planning replaces further architectural debate.
