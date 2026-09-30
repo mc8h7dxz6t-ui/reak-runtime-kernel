@@ -1,0 +1,179 @@
+{
+  "contracts_id": "reak-interface-contracts-v1",
+  "versioning_policy": "semantic_major_bump_on_normative_behavior_change",
+  "contracts": [
+    {
+      "interface_id": "IF-DR-01",
+      "version": "1.0.0",
+      "owner_module": "reak-durable-record",
+      "operations": ["append", "read_ordered", "supersede"],
+      "inputs": ["RecordEnvelope"],
+      "outputs": ["AppendAck", "RecordCursor"],
+      "invariants": ["append_only", "tamper_evident_chain"]
+    },
+    {
+      "interface_id": "IF-POL-01",
+      "version": "1.0.0",
+      "owner_module": "reak-policy-context",
+      "operations": ["resolve_epoch", "pin_epoch"],
+      "inputs": ["PolicyEpochRef"],
+      "outputs": ["PolicySnapshotHandle"],
+      "invariants": ["decisions_cite_epoch"]
+    },
+    {
+      "interface_id": "IF-UES-01",
+      "version": "1.0.0",
+      "owner_module": "reak-uncertainty-ledger",
+      "operations": ["declare_budget", "consume_budget", "reject_violation"],
+      "inputs": ["StageId", "UncertaintyDelta"],
+      "outputs": ["BudgetReceipt", "ViolationRecord"],
+      "invariants": ["no_silent_collapse"]
+    },
+    {
+      "interface_id": "IF-AUTH-01",
+      "version": "1.0.0",
+      "owner_module": "reak-authority",
+      "operations": ["grant_attempt", "revoke", "verify_scope"],
+      "inputs": ["AuthorityRequest"],
+      "outputs": ["AuthorityRecord", "DenialRecord"],
+      "qualification_gate": "IQ-AUTH-01 (planned)"
+    },
+    {
+      "interface_id": "IF-EXP-01",
+      "version": "1.0.0",
+      "owner_module": "reak-exposure",
+      "operations": ["reserve", "release", "derate"],
+      "inputs": ["ExposureReservation"],
+      "outputs": ["ReservationToken", "CeilingBreachRecord"]
+    },
+    {
+      "interface_id": "IF-BND-01",
+      "version": "1.0.0",
+      "owner_module": "reak-boundary",
+      "operations": ["normalize_ingress", "refuse"],
+      "inputs": ["UntrustedIngress"],
+      "outputs": ["NormalizedIntent", "BoundaryRefusal"]
+    },
+    {
+      "interface_id": "IF-CMT-01",
+      "version": "1.0.0",
+      "owner_module": "reak-commitment",
+      "operations": ["bind", "verify_binding", "void_binding"],
+      "inputs": ["CommitmentIntent", "AuthorityRecord", "ReservationToken", "PolicySnapshotHandle"],
+      "outputs": ["CommitmentRecord", "CommitmentDigest"],
+      "qualification_gate": "IQ-CMT-01 (R4; HQ-CMT plan)",
+      "invariants": ["bind_before_effect"]
+    },
+    {
+      "interface_id": "IF-DSP-01",
+      "version": "1.0.0",
+      "owner_module": "reak-dispatch",
+      "operations": ["issue_ticket", "execute_once", "ack_or_nack"],
+      "inputs": ["CommitmentRecord", "DispatchSpec"],
+      "outputs": ["DispatchTicket", "EffectAttemptRecord"],
+      "qualification_gate": "IQ-DSP-01 (R5)",
+      "invariants": ["single_releaser_per_generation"]
+    },
+    {
+      "interface_id": "IF-OBS-01",
+      "version": "1.0.0",
+      "owner_module": "reak-observation",
+      "operations": ["record_sense", "mark_duplicate", "mark_conflict"],
+      "inputs": ["SensePayload", "Provenance"],
+      "outputs": ["ObservationRecord"],
+      "qualification_gate": "IQ-OBS-01 (R6)"
+    },
+    {
+      "interface_id": "IF-REC-01",
+      "version": "1.0.0",
+      "owner_module": "reak-reconciliation",
+      "operations": ["compare_expected_observed", "emit_mismatch"],
+      "inputs": ["ExpectedConsequence", "ObservationSet"],
+      "outputs": ["ReconciliationRecord"],
+      "qualification_gate": "IQ-REC-01 (R7)"
+    },
+    {
+      "interface_id": "IF-TRU-01",
+      "version": "1.0.0",
+      "owner_module": "reak-truth",
+      "operations": ["derive_conclusion", "preserve_non_established"],
+      "inputs": ["ReconciliationRecord", "AdmissibilitySet"],
+      "outputs": ["TruthRecord"],
+      "qualification_gate": "IQ-007 lineage → IQ-TRU-01",
+      "claim_ceiling": "canonical_truth_runtime_only"
+    },
+    {
+      "interface_id": "IF-EVD-01",
+      "version": "1.0.0",
+      "owner_module": "reak-evidence-hooks",
+      "operations": ["check_admissibility", "emit_handle"],
+      "inputs": ["EvidencePointer"],
+      "outputs": ["AdmissibilityVerdict", "CatalogueHandle"],
+      "note": "Catalogue storage outside kernel; hooks only"
+    },
+    {
+      "interface_id": "IF-RCV-01",
+      "version": "1.0.0",
+      "owner_module": "reak-recovery",
+      "operations": ["propose_recovery", "authorize_recovery_intent"],
+      "inputs": ["TruthRecord", "PolicySnapshotHandle"],
+      "outputs": ["RecoveryIntentRecord"],
+      "qualification_gate": "IQ-008 lineage → IQ-RCV-01",
+      "invariants": ["authorizes_execution_false"]
+    },
+    {
+      "interface_id": "IF-PRG-01",
+      "version": "1.0.0",
+      "owner_module": "reak-progression",
+      "operations": ["classify_next", "default_hold"],
+      "inputs": ["TruthRecord", "RecoveryIntentRecord", "PolicySnapshotHandle"],
+      "outputs": ["ProgressionRecord"],
+      "qualification_gate": "IQ-009 lineage → IQ-PRG-01",
+      "claim_ceiling": "canonical_safenext_runtime_only"
+    },
+    {
+      "interface_id": "IF-REG-01",
+      "version": "1.0.0",
+      "owner_module": "reak-registry",
+      "operations": ["register_artifact", "resolve_pointer"],
+      "inputs": ["ArtifactDescriptor"],
+      "outputs": ["RegistryPointer"],
+      "invariants": ["no_correctness_assertion"]
+    },
+    {
+      "interface_id": "IF-RPL-01",
+      "version": "1.0.0",
+      "owner_module": "reak-replay",
+      "operations": ["verify_history", "reconstruct_view"],
+      "inputs": ["RecordCursor", "PolicySnapshotHandle"],
+      "outputs": ["ReplayReport"],
+      "invariants": ["non_normative_for_future_action"]
+    },
+    {
+      "interface_id": "IF-SHELL-01",
+      "version": "1.0.0",
+      "owner_module": "reak-lifecycle-shell",
+      "operations": ["advance_lifecycle", "export_audit_slice"],
+      "inputs": ["LifecycleCommand"],
+      "outputs": ["LifecycleState", "AuditExport"]
+    },
+    {
+      "interface_id": "IF-HOST-01",
+      "version": "1.0.0",
+      "owner_module": "reak-integration-host",
+      "operations": ["on_host_callback", "translate_effect"],
+      "inputs": ["HostContext", "DispatchTicket"],
+      "outputs": ["HostAck", "UntrustedIngress"],
+      "adapters": ["temporal", "step_functions", "agent_gateway", "kubernetes", "mcp", "http"]
+    },
+    {
+      "interface_id": "IF-EXPORT-01",
+      "version": "1.0.0",
+      "owner_module": "reak-lifecycle-shell",
+      "operations": ["export_evidence_slice"],
+      "outputs": ["EvidenceExportBundle"],
+      "consumers": ["evidencelab", "qualification_kernel"],
+      "invariants": ["read_only", "no_feedback_into_dispatch"]
+    }
+  ]
+}

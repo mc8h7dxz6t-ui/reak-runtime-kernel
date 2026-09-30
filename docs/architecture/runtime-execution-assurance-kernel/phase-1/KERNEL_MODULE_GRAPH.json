@@ -1,0 +1,145 @@
+{
+  "graph_id": "reak-module-graph-v1",
+  "phase": "1",
+  "status": "DRAFT_PENDING_FREEZE",
+  "constitutional_ref": "../../constitutional-consensus-review/FINAL_ARCHITECTURAL_CONSTITUTION_REVIEW.md",
+  "traceability_ref": "../../implementation-roadmap/R0_CONSTITUTIONAL_TRACEABILITY_MATRIX.json",
+  "modules": [
+    {
+      "module_id": "reak-durable-record",
+      "layer": "foundation",
+      "constitutional_articles": ["ART-IV-G4"],
+      "roadmap_owner": "Foundation (pre-R3 invariant)",
+      "claim_ceiling": "append_only_persistence_contract"
+    },
+    {
+      "module_id": "reak-policy-context",
+      "layer": "foundation",
+      "constitutional_articles": ["ART-IV-G5"],
+      "roadmap_owner": "Foundation",
+      "claim_ceiling": "epoch_binding_and_resolution"
+    },
+    {
+      "module_id": "reak-uncertainty-ledger",
+      "layer": "foundation",
+      "constitutional_articles": ["ART-V"],
+      "roadmap_owner": "Foundation",
+      "claim_ceiling": "stage_budget_enforcement"
+    },
+    {
+      "module_id": "reak-registry",
+      "layer": "foundation",
+      "constitutional_articles": ["ART-III-12"],
+      "roadmap_owner": "Foundation",
+      "claim_ceiling": "lineage_index_no_correctness"
+    },
+    {
+      "module_id": "reak-authority",
+      "layer": "plane",
+      "constitutional_articles": ["ART-III-1"],
+      "roadmap_owner": "R4 prerequisite",
+      "claim_ceiling": "scoped_permission_records"
+    },
+    {
+      "module_id": "reak-exposure",
+      "layer": "plane",
+      "constitutional_articles": ["ART-III-2"],
+      "roadmap_owner": "R4 prerequisite",
+      "claim_ceiling": "reservation_and_ceiling"
+    },
+    {
+      "module_id": "reak-boundary",
+      "layer": "plane",
+      "constitutional_articles": ["ART-III-3"],
+      "roadmap_owner": "R6",
+      "claim_ceiling": "ingress_normalisation_refusal"
+    },
+    {
+      "module_id": "reak-commitment",
+      "layer": "plane",
+      "constitutional_articles": ["ART-III-10", "ART-IV-G1"],
+      "roadmap_owner": "R4",
+      "claim_ceiling": "bind_before_effect"
+    },
+    {
+      "module_id": "reak-dispatch",
+      "layer": "plane",
+      "constitutional_articles": ["ART-III-11", "ART-IV-G2"],
+      "roadmap_owner": "R5",
+      "claim_ceiling": "sole_effect_owner"
+    },
+    {
+      "module_id": "reak-observation",
+      "layer": "plane",
+      "constitutional_articles": ["ART-III-4"],
+      "roadmap_owner": "R6",
+      "claim_ceiling": "sense_records_only"
+    },
+    {
+      "module_id": "reak-reconciliation",
+      "layer": "plane",
+      "constitutional_articles": ["ART-III-5"],
+      "roadmap_owner": "R7",
+      "claim_ceiling": "structural_compare_only"
+    },
+    {
+      "module_id": "reak-truth",
+      "layer": "plane",
+      "constitutional_articles": ["ART-III-6", "ART-IV-G3"],
+      "roadmap_owner": "R1 / R7 path",
+      "claim_ceiling": "epistemic_classes_under_evidence"
+    },
+    {
+      "module_id": "reak-evidence-hooks",
+      "layer": "plane",
+      "constitutional_articles": ["ART-III-7"],
+      "roadmap_owner": "R12 touchpoints",
+      "claim_ceiling": "admissibility_pointers_only"
+    },
+    {
+      "module_id": "reak-recovery",
+      "layer": "plane",
+      "constitutional_articles": ["ART-III-8"],
+      "roadmap_owner": "R8",
+      "claim_ceiling": "recovery_intent_non_executing"
+    },
+    {
+      "module_id": "reak-progression",
+      "layer": "plane",
+      "constitutional_articles": ["ART-III-9", "ART-IV-G3"],
+      "roadmap_owner": "R2 / R3",
+      "claim_ceiling": "admissible_next_class_only"
+    },
+    {
+      "module_id": "reak-replay",
+      "layer": "plane",
+      "constitutional_articles": ["ART-III-13"],
+      "roadmap_owner": "Foundation",
+      "claim_ceiling": "verify_reconstruct_non_normative"
+    },
+    {
+      "module_id": "reak-lifecycle-shell",
+      "layer": "assembly",
+      "constitutional_articles": ["ART-I", "ART-II"],
+      "roadmap_owner": "R3 pattern → R9 HRT",
+      "claim_ceiling": "ordered_seam_wiring_only"
+    },
+    {
+      "module_id": "reak-integration-host",
+      "layer": "host",
+      "constitutional_articles": ["ART-II"],
+      "roadmap_owner": "R14 adapters",
+      "claim_ceiling": "host_adapter_no_semantic_ownership"
+    }
+  ],
+  "seams": [
+    { "from": "reak-boundary", "to": "reak-commitment", "interface_id": "IF-BND-CMT" },
+    { "from": "reak-commitment", "to": "reak-dispatch", "interface_id": "IF-CMT-DSP" },
+    { "from": "reak-observation", "to": "reak-reconciliation", "interface_id": "IF-OBS-REC" },
+    { "from": "reak-reconciliation", "to": "reak-truth", "interface_id": "IF-REC-TRU" },
+    { "from": "reak-truth", "to": "reak-recovery", "interface_id": "IF-TRU-RCV" },
+    { "from": "reak-truth", "to": "reak-progression", "interface_id": "IF-TRU-PRG" },
+    { "from": "reak-progression", "to": "reak-commitment", "interface_id": "IF-PRG-CMT", "note": "re-bind on new generation only" }
+  ],
+  "all_modules_depend_on": ["reak-durable-record", "reak-policy-context", "reak-uncertainty-ledger"]
+}

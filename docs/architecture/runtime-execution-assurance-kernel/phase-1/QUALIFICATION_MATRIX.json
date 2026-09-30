@@ -1,0 +1,211 @@
+{
+  "matrix_id": "reak-qualification-matrix-v1",
+  "phase": "1",
+  "qualification_programme": "qualification-kernel (separate repo)",
+  "rows": [
+    {
+      "module_id": "reak-durable-record",
+      "constitutional_owner": "ART-IV-G4",
+      "roadmap_gate": "Foundation",
+      "iq_id": "IQ-DR-01",
+      "hostile_tests": ["append_race", "supersede_chain", "crash_mid_append"],
+      "failure_modes": ["lost_append", "forked_history"],
+      "claim_ceiling": "append_only_persistence_contract",
+      "acceptance_criteria": "CCS G4 mandatory scenarios pass via Qualification Kernel",
+      "evidence_ref": "R0 ART-IV-G4; iq-001a lineage"
+    },
+    {
+      "module_id": "reak-policy-context",
+      "constitutional_owner": "ART-IV-G5",
+      "roadmap_gate": "Foundation",
+      "iq_id": "IQ-POL-01",
+      "hostile_tests": ["epoch_skew_deploy", "stale_epoch_commit"],
+      "failure_modes": ["inconsistent_reducers"],
+      "claim_ceiling": "epoch_binding_and_resolution",
+      "acceptance_criteria": "Same history+epoch → same progression/truth classes on deterministic subset",
+      "evidence_ref": "R3 manifest epoch pins; IQ-009 L-01 class limitations"
+    },
+    {
+      "module_id": "reak-uncertainty-ledger",
+      "constitutional_owner": "ART-V",
+      "roadmap_gate": "Foundation",
+      "iq_id": "IQ-UES-01",
+      "hostile_tests": ["budget_overrun_injection", "cross_stage_collapse"],
+      "failure_modes": ["silent_uncertainty_removal"],
+      "claim_ceiling": "stage_budget_enforcement",
+      "acceptance_criteria": "UES manifest stage rules enforced at each seam",
+      "evidence_ref": "ues/UES_PHASE_GATE.json"
+    },
+    {
+      "module_id": "reak-authority",
+      "constitutional_owner": "ART-III-1",
+      "roadmap_gate": "R4 prerequisite",
+      "iq_id": "IQ-AUTH-01",
+      "hostile_tests": ["scope_escalation", "expired_grant_replay"],
+      "failure_modes": ["unscoped_dispatch"],
+      "claim_ceiling": "scoped_permission_records",
+      "acceptance_criteria": "No commitment without valid authority record",
+      "evidence_ref": "iq-001a/IQ001A_PHASE_GATE.json"
+    },
+    {
+      "module_id": "reak-exposure",
+      "constitutional_owner": "ART-III-2",
+      "roadmap_gate": "R4 prerequisite",
+      "iq_id": "IQ-EXP-01",
+      "hostile_tests": ["reservation_leak", "ceiling_bypass_fanout"],
+      "failure_modes": ["unbounded_liability"],
+      "claim_ceiling": "reservation_and_ceiling",
+      "acceptance_criteria": "Commitment blocked when reservation unavailable",
+      "evidence_ref": "R4 commitment package exposure binding"
+    },
+    {
+      "module_id": "reak-boundary",
+      "constitutional_owner": "ART-III-3",
+      "roadmap_gate": "R6",
+      "iq_id": "IQ-BND-01",
+      "hostile_tests": ["semantic_injection", "oversized_payload"],
+      "failure_modes": ["inner_plane_trust_of_wire"],
+      "claim_ceiling": "ingress_normalisation_refusal",
+      "acceptance_criteria": "iq-002a equivalence or stricter",
+      "evidence_ref": "iq-002a/IQ002A_PHASE_GATE.json"
+    },
+    {
+      "module_id": "reak-commitment",
+      "constitutional_owner": "ART-III-10",
+      "roadmap_gate": "R4",
+      "iq_id": "IQ-CMT-01",
+      "hostile_tests": ["crash_before_bind", "digest_mismatch", "double_bind_same_generation"],
+      "failure_modes": ["effect_before_bind"],
+      "claim_ceiling": "bind_before_effect",
+      "acceptance_criteria": "HQ-CMT-01..10 plan executed; CCS III-10 mandatory",
+      "evidence_ref": "r4-canonical-commitment/; ID-010 class"
+    },
+    {
+      "module_id": "reak-dispatch",
+      "constitutional_owner": "ART-III-11",
+      "roadmap_gate": "R5",
+      "iq_id": "IQ-DSP-01",
+      "hostile_tests": ["duplicate_ticket", "zombie_worker", "lost_ack"],
+      "failure_modes": ["double_effect", "split_brain_release"],
+      "claim_ceiling": "sole_effect_owner",
+      "acceptance_criteria": "At most one normative effect per lineage generation",
+      "evidence_ref": "R0 ART-IV-G2; R9 HRT"
+    },
+    {
+      "module_id": "reak-observation",
+      "constitutional_owner": "ART-III-4",
+      "roadmap_gate": "R6",
+      "iq_id": "IQ-OBS-01",
+      "hostile_tests": ["duplicate_sense", "ordering_inversion", "capacity_collapse"],
+      "failure_modes": ["truth_from_raw_provider"],
+      "claim_ceiling": "sense_records_only",
+      "acceptance_criteria": "Component IQ + production path R6; closes IQ-005 gap",
+      "evidence_ref": "id-005; R0 qualification gap IQ-005"
+    },
+    {
+      "module_id": "reak-reconciliation",
+      "constitutional_owner": "ART-III-5",
+      "roadmap_gate": "R7",
+      "iq_id": "IQ-REC-01",
+      "hostile_tests": ["structural_mismatch_hidden", "partition_timeout"],
+      "failure_modes": ["false_match"],
+      "claim_ceiling": "structural_compare_only",
+      "acceptance_criteria": "End-to-end with observation; closes IQ-006 gap",
+      "evidence_ref": "id-006; R0 qualification gap IQ-006"
+    },
+    {
+      "module_id": "reak-truth",
+      "constitutional_owner": "ART-III-6",
+      "roadmap_gate": "R1 admitted",
+      "iq_id": "IQ-TRU-01",
+      "hostile_tests": ["inadmissible_bundle", "premature_established"],
+      "failure_modes": ["epistemic_overreach"],
+      "claim_ceiling": "canonical_truth_runtime_only",
+      "acceptance_criteria": "Re-qualify ported logic; parity with iq-007",
+      "evidence_ref": "iq-007/IQ007_PHASE_GATE.json"
+    },
+    {
+      "module_id": "reak-evidence-hooks",
+      "constitutional_owner": "ART-III-7",
+      "roadmap_gate": "R12 touchpoints",
+      "iq_id": "IQ-EVD-HOOK-01",
+      "hostile_tests": ["garbage_admissible_flag"],
+      "failure_modes": ["catalogue_conflated_with_truth"],
+      "claim_ceiling": "admissibility_pointers_only",
+      "acceptance_criteria": "c-05 rules machine-checkable at hook",
+      "evidence_ref": "c-05/EVIDENCE_ENGINEERING_CONSTITUTION.json"
+    },
+    {
+      "module_id": "reak-recovery",
+      "constitutional_owner": "ART-III-8",
+      "roadmap_gate": "R8",
+      "iq_id": "IQ-RCV-01",
+      "hostile_tests": ["recovery_invokes_dispatch", "retry_loop_unbounded"],
+      "failure_modes": ["hidden_effect_via_recovery"],
+      "claim_ceiling": "recovery_intent_non_executing",
+      "acceptance_criteria": "R8 on real dispatch path; parity with iq-008",
+      "evidence_ref": "iq-008/IQ008_PHASE_GATE.json"
+    },
+    {
+      "module_id": "reak-progression",
+      "constitutional_owner": "ART-III-9",
+      "roadmap_gate": "R2",
+      "iq_id": "IQ-PRG-01",
+      "hostile_tests": ["proceed_without_truth", "dispatch_smuggled_in_proceed"],
+      "failure_modes": ["proceed_equals_effect"],
+      "claim_ceiling": "canonical_safenext_runtime_only",
+      "acceptance_criteria": "Parity with iq-009 limitations documented",
+      "evidence_ref": "iq-009/IQ009_PHASE_GATE.json"
+    },
+    {
+      "module_id": "reak-registry",
+      "constitutional_owner": "ART-III-12",
+      "roadmap_gate": "Foundation",
+      "iq_id": "IQ-REG-01",
+      "hostile_tests": ["stale_pointer", "registry_asserts_truth"],
+      "failure_modes": ["lineage_ambiguity"],
+      "claim_ceiling": "lineage_index_no_correctness",
+      "acceptance_criteria": "iq-003 parity",
+      "evidence_ref": "iq-003/IQ003_PHASE_GATE.json"
+    },
+    {
+      "module_id": "reak-replay",
+      "constitutional_owner": "ART-III-13",
+      "roadmap_gate": "Foundation",
+      "iq_id": "IQ-RPL-01",
+      "hostile_tests": ["replay_drives_dispatch", "history_rewrite"],
+      "failure_modes": ["normative_replay"],
+      "claim_ceiling": "verify_reconstruct_non_normative",
+      "acceptance_criteria": "iq-004 + c-04 parity",
+      "evidence_ref": "iq-004/IQ004_PHASE_GATE.json"
+    },
+    {
+      "module_id": "reak-lifecycle-shell",
+      "constitutional_owner": "ART-I, ART-II",
+      "roadmap_gate": "R3 → R9",
+      "iq_id": "IQ-ASM-01",
+      "hostile_tests": ["seam_bypass", "plane_collapse"],
+      "failure_modes": ["ownership_violation_at_wiring"],
+      "claim_ceiling": "ordered_seam_wiring_only",
+      "acceptance_criteria": "R3 manifest equivalence + R9 HRT",
+      "evidence_ref": "r3-canonical-assembly-005-009/ASSEMBLY_MANIFEST.json"
+    },
+    {
+      "module_id": "reak-integration-host",
+      "constitutional_owner": "ART-II",
+      "roadmap_gate": "R14",
+      "iq_id": "IQ-HOST-{adapter}",
+      "hostile_tests": ["host_skips_commitment", "credential_leak"],
+      "failure_modes": ["adapter_becomes_dispatch_owner"],
+      "claim_ceiling": "host_adapter_no_semantic_ownership",
+      "acceptance_criteria": "Per-provider qualification; ext-001 is not normative owner",
+      "evidence_ref": "R0 ART-III-11 board note"
+    }
+  ],
+  "assembly_gates": [
+    { "gate": "IQ-ASM-005-009", "maps_from": "R3", "status": "reference_only_until_reak_impl" },
+    { "gate": "HRT-001", "maps_from": "R9", "status": "planned" },
+    { "gate": "CCS-R11", "maps_from": "R11", "status": "qualification_kernel" },
+    { "gate": "EVP-EVIDENCELAB", "maps_from": "R12", "status": "evidencelab" }
+  ]
+}

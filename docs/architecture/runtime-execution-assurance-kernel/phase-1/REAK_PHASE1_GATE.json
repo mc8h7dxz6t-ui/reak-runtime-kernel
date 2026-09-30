@@ -1,0 +1,57 @@
+{
+  "gate_id": "reak-phase1-architecture",
+  "version": "1.0.0",
+  "status": "ARCHITECTURE_FROZEN",
+  "frozen_at": "2026-09-30",
+  "frozen_by": "REAK Phase 1 admission exercise",
+  "scope": "Architecture extraction only; no implementation",
+  "evidence_refs": {
+    "constitution": "../constitutional-consensus-review/FINAL_ARCHITECTURAL_CONSTITUTION_REVIEW.md",
+    "traceability": "../implementation-roadmap/R0_CONSTITUTIONAL_TRACEABILITY_MATRIX.json",
+    "roadmap": "../implementation-roadmap/IMPLEMENTATION_QUALIFICATION_ROADMAP_v1.0.md",
+    "ccs": "../constitutional-conformance-spec/CCS_HOSTILE_CORPUS.json",
+    "r3_assembly": "../consequence-ii/r3-canonical-assembly-005-009/ASSEMBLY_MANIFEST.json",
+    "r4_commitment": "../consequence-ii/r4-canonical-commitment/",
+    "iq_007": "../consequence-ii/iq-007/IQ007_PHASE_GATE.json",
+    "iq_008": "../consequence-ii/iq-008/IQ008_PHASE_GATE.json",
+    "iq_009": "../consequence-ii/iq-009/IQ009_PHASE_GATE.json",
+    "evp": "../../../external-validation-programme/EVP_v1_FROZEN_MANIFEST.json",
+    "prb": "../../../programme-reality-board/PRB_v1_FROZEN_MANIFEST.json"
+  },
+  "deliverables": [
+    "README.md",
+    "PROGRAMME_TRIAD_BOUNDARIES.md",
+    "KERNEL_ARCHITECTURE.md",
+    "KERNEL_MODULE_GRAPH.json",
+    "KERNEL_MODULE_GRAPH.md",
+    "INTERFACE_CONTRACTS.json",
+    "INTERFACE_CONTRACTS.md",
+    "DEPENDENCY_GRAPH.json",
+    "TRUST_BOUNDARY_MAP.md",
+    "THREAT_MODEL.md",
+    "QUALIFICATION_MATRIX.json",
+    "MODULE_ADMISSION_REPORT.md",
+    "HISTORICAL_IMPORT_REPORT.md",
+    "BUILD_ORDER.md",
+    "REAK_PHASE1_GATE.json"
+  ],
+  "admission_summary": {
+    "modules_admitted": 18,
+    "modules_rejected_from_kernel": 11,
+    "approximate_historical_concept_retention": "72%",
+    "three_programme_split": true
+  },
+  "success_criteria": {
+    "clean_architecture": true,
+    "runtime_qualification_evidence_separated": true,
+    "every_admitted_module_has_constitutional_owner": true,
+    "every_admitted_module_has_qualification_path": true,
+    "historical_imports_explicit": true,
+    "ready_for_r4_r17_phased_implementation": true
+  },
+  "next_phase": {
+    "name": "Phase 2 — Foundation implementation",
+    "blocked_by": [],
+    "entry_criteria": "Stakeholder ack of ARCHITECTURE_FROZEN"
+  }
+}
