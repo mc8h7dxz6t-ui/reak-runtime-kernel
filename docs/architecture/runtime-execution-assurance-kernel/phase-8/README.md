@@ -1,6 +1,6 @@
 # REAK Phase 8 — Recovery engine
 
-**Status:** Implementation complete — gate **PROPOSED**  
+**Status:** **ACCEPTED / FROZEN** (2026-09-30)  
 **Contract:** IF-RCV-01 (`reak-recovery`)
 
 Consumes immutable `TruthRecord` only; emits immutable recovery records and strategy. Never dispatches or mutates truth.
