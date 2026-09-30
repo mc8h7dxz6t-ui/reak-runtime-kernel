@@ -1,6 +1,8 @@
 # Module admission report
 
-Each candidate module is scored against six criteria: **constitutional owner**, **roadmap owner**, **external justification**, **commercial justification**, **qualification strategy**, **removal analysis**.
+**Permanent rule (post–Phase 1):** see [REAK_ENGINEERING_GOVERNANCE.md](../REAK_ENGINEERING_GOVERNANCE.md#module-admission-rule-permanent). New modules use: constitutional owner, runtime responsibility, external justification, qualification strategy, security review, removal analysis.
+
+Phase 1 candidates below were scored against the Phase 1 exercise (including roadmap/commercial columns). Grandfathered admissions remain valid; new work must follow governance.
 
 **Verdict enums:** ADMIT | ADMIT_WITH_LIMITATION | REJECT (stay outside kernel)
 

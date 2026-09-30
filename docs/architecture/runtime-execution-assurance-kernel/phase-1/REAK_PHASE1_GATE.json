@@ -1,9 +1,21 @@
 {
   "gate_id": "reak-phase1-architecture",
   "version": "1.0.0",
-  "status": "ARCHITECTURE_FROZEN",
+  "status": "ACCEPTED",
+  "architecture_frozen": true,
   "frozen_at": "2026-09-30",
+  "accepted_at": "2026-09-30",
   "frozen_by": "REAK Phase 1 admission exercise",
+  "accepted_by": "Programme stakeholder — REAK Chief Architect charter",
+  "acceptance_reason": [
+    "Architecture extracted",
+    "Runtime separated from Qualification Kernel",
+    "Runtime separated from EvidenceLab",
+    "Historical implementation reduced to admitted subset",
+    "Clean kernel boundary established",
+    "Legacy preserved rather than rewritten"
+  ],
+  "governance_ref": "../REAK_ENGINEERING_GOVERNANCE.md",
   "scope": "Architecture extraction only; no implementation",
   "evidence_refs": {
     "constitution": "../constitutional-consensus-review/FINAL_ARCHITECTURAL_CONSTITUTION_REVIEW.md",
@@ -50,8 +62,9 @@
     "ready_for_r4_r17_phased_implementation": true
   },
   "next_phase": {
-    "name": "Phase 2 — Foundation implementation",
+    "name": "Phase 2 — Foundation substrate",
+    "location": "../phase-2/README.md",
     "blocked_by": [],
-    "entry_criteria": "Stakeholder ack of ARCHITECTURE_FROZEN"
+    "entry_criteria": "Met — Phase 1 ACCEPTED; governance published"
   }
 }
