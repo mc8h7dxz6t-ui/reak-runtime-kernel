@@ -13,6 +13,7 @@ Production runtime implementation. Architecture and admission: `../docs/architec
 | `reak-replay` | reak-replay | IF-RPL-01 |
 | `reak-authority` | reak-authority | IF-AUTH-01 |
 | `reak-exposure` | reak-exposure | IF-EXP-01 |
+| `reak-commitment` | reak-commitment | IF-CMT-01 |
 
 ```bash
 cargo test --workspace

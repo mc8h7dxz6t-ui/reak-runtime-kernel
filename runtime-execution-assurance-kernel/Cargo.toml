@@ -9,6 +9,7 @@ members = [
     "crates/reak-replay",
     "crates/reak-authority",
     "crates/reak-exposure",
+    "crates/reak-commitment",
 ]
 [workspace.package]
 version = "0.1.0"
@@ -24,6 +25,7 @@ reak-registry = { path = "crates/reak-registry" }
 reak-replay = { path = "crates/reak-replay" }
 reak-authority = { path = "crates/reak-authority" }
 reak-exposure = { path = "crates/reak-exposure" }
+reak-commitment = { path = "crates/reak-commitment" }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 sha2 = "0.10"

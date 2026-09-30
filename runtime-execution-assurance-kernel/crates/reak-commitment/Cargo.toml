@@ -1,0 +1,26 @@
+[package]
+name = "reak-commitment"
+description = "REAK commitment engine — bind-before-effect (IF-CMT-01)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+reak-types = { workspace = true }
+reak-durable-record = { workspace = true }
+reak-policy-context = { workspace = true }
+reak-ues = { workspace = true }
+reak-authority = { workspace = true }
+reak-exposure = { workspace = true }
+reak-replay = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+sha2 = { workspace = true }
+thiserror = { workspace = true }
+parking_lot = { workspace = true }
+
+[dev-dependencies]
+proptest = { workspace = true }
+sha2 = { workspace = true }
+reak-policy-context = { workspace = true }

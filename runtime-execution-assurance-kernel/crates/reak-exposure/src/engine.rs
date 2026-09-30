@@ -31,6 +31,11 @@ impl ExposureService {
         }
     }
 
+    /// Shared authority service used for reservation scope checks (IF-EXP-01 composition).
+    pub fn authority(&self) -> &AuthorityService {
+        &self.authority
+    }
+
     pub fn set_ceiling(&self, principal_id: &str, ceiling: u64) {
         self.ceiling_per_principal
             .write()
