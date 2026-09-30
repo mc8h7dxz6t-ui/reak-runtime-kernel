@@ -19,3 +19,5 @@ This repository is a design freeze, not a runtime yet. Implementation starts fro
 [IQ-009.md](IQ-009.md) is the qualification verdict for IQ-009.
 
 [ROADMAP-REVIEW.md](ROADMAP-REVIEW.md) records whether later accepted evidence changes the implementation roadmap. It does not change the constitution.
+
+[ROADMAP-FREEZE-REVIEW.md](ROADMAP-FREEZE-REVIEW.md) rejects a later freeze proposal that reopened qualified packages and put EvidenceLab in front of CCS.
