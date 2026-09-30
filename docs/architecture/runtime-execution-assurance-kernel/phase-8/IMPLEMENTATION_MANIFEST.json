@@ -1,0 +1,11 @@
+{
+  "manifest_id": "reak-phase8-recovery",
+  "version": "0.1.0",
+  "status": "IMPLEMENTATION_COMPLETE",
+  "crate": "reak-recovery",
+  "interface": "IF-RCV-01",
+  "operations": ["propose_recovery", "authorize_recovery_intent", "verify", "recover_from_log"],
+  "dependencies": ["reak-truth", "reak-durable-record", "reak-replay", "reak-types"],
+  "test_counts": { "total_integration": 12 },
+  "invariants": ["authorizes_execution_false"]
+}
