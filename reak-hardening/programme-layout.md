@@ -28,12 +28,15 @@ This is organisational guidance for how disconnected programme repos should be a
 
 The agent workspace today is a **programme/documentation** repository, not the canonical REAK Rust repo. Phase 2B remains **BLOCKED** until `manifest.json` points at a real REAK repository and SHA with a verifiable build.
 
+## Canonical remote name
+
+Use git remote **`reak-runtime`** for the canonical Rust repository (URL per environment). Hardening and Qualification Kernel pin with `templates/HARDENING_PIN.json` (`reak_revision`).
+
 ## What to do next (one action)
 
-Create or designate the **canonical REAK Rust repository**, push the foundation implementation there, then set in `intake/manifest.json`:
+Point intake at that repo and SHA, then re-run Phase 2B:
 
-- `repository.identity` → that repo
-- `implementation.implementation_root` → workspace root or submodule path
-- `modules[]` → crates from `cargo metadata`
+- `manifest.json` → `implementation.canonical_reak_repository` + `repository.commit_sha` (= `reak_revision`)
+- `modules[]` from `cargo metadata` on a read-only checkout at that SHA
 
-Re-run Phase 2B; gate becomes **CONNECTED** when build and tests pass at the recorded SHA.
+Gate **CONNECTED** when build and tests pass. See [REPOSITORY_PROGRAMME_TOPOLOGY.md](REPOSITORY_PROGRAMME_TOPOLOGY.md).

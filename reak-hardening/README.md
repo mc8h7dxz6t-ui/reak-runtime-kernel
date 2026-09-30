@@ -22,7 +22,7 @@ RECOMMENDATION. Land REAK implementation + populate `manifest.json` modules[], v
 
 Deliver intake to this directory as `reak-hardening/intake/manifest.json` and `reak-hardening/intake/BUILD.md`.
 
-**Canonical layout:** REAK implementation in one Rust repo; Hardening has no codebase of its own and attaches read-only to that repo. See [programme-layout.md](programme-layout.md).
+**Canonical layout:** REAK implementation in one Rust repo (`reak-runtime`); Hardening has no codebase of its own and attaches read-only at a pinned SHA. See [REPOSITORY_PROGRAMME_TOPOLOGY.md](REPOSITORY_PROGRAMME_TOPOLOGY.md) and [programme-layout.md](programme-layout.md). Pin template: [templates/HARDENING_PIN.json](templates/HARDENING_PIN.json).
 
 ## Deliverables
 
