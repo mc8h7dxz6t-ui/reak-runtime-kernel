@@ -467,6 +467,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "reak-truth"
+version = "0.1.0"
+dependencies = [
+ "hex",
+ "parking_lot",
+ "proptest",
+ "reak-commitment",
+ "reak-durable-record",
+ "reak-reconciliation",
+ "reak-replay",
+ "reak-types",
+ "serde",
+ "serde_json",
+ "sha2",
+ "thiserror",
+]
+
+[[package]]
 name = "reak-types"
 version = "0.1.0"
 dependencies = [

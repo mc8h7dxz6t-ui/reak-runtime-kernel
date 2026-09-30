@@ -1,0 +1,12 @@
+{
+  "manifest_id": "reak-phase7-truth",
+  "version": "0.1.0",
+  "status": "IMPLEMENTATION_COMPLETE",
+  "completed_at": "2026-09-30",
+  "crate": "reak-truth",
+  "interface": "IF-TRU-01",
+  "operations": ["derive_conclusion", "preserve_non_established", "verify", "recover_from_log"],
+  "dependencies": ["reak-reconciliation", "reak-durable-record", "reak-replay", "reak-types"],
+  "test_counts": { "total_integration": 11 },
+  "claims": { "qualification": false, "production": false }
+}

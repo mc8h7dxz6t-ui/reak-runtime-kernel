@@ -1,0 +1,15 @@
+{
+  "gate_id": "reak-phase7-truth",
+  "status": "PROPOSED",
+  "proposed_at": "2026-09-30",
+  "phase6_accepted": true,
+  "foundation_touch": false,
+  "verification_command": "cd runtime-execution-assurance-kernel && cargo test -p reak-truth && cargo test --workspace",
+  "exit_criteria": {
+    "if_tru_01_derive_preserve": true,
+    "no_recovery_or_progression": true,
+    "unknown_not_established": true,
+    "append_only_truth_records": true
+  },
+  "recommended_verdict": "ACCEPT_IMPLEMENTATION_PENDING_STAKEHOLDER_REVIEW"
+}
