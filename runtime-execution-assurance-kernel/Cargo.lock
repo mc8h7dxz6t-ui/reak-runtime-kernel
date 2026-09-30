@@ -392,6 +392,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "reak-observation"
+version = "0.1.0"
+dependencies = [
+ "hex",
+ "parking_lot",
+ "proptest",
+ "reak-durable-record",
+ "reak-replay",
+ "reak-types",
+ "serde",
+ "serde_json",
+ "sha2",
+ "thiserror",
+]
+
+[[package]]
 name = "reak-policy-context"
 version = "0.1.0"
 dependencies = [

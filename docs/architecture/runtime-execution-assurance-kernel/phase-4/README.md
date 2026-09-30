@@ -1,6 +1,6 @@
 # REAK Phase 4 — Dispatch engine
 
-**Status:** Implementation complete — gate **PROPOSED**  
+**Status:** **ACCEPTED / FROZEN** (bug fixes only)  
 **Contract:** IF-DSP-01 (`reak-dispatch`)
 
 ## Scope

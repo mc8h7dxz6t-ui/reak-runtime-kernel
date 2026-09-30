@@ -1,0 +1,21 @@
+{
+  "gate_id": "reak-phase5-observation",
+  "status": "PROPOSED",
+  "proposed_at": "2026-09-30",
+  "phase1_unmodified": true,
+  "phase2_frozen": true,
+  "phase3_frozen": true,
+  "phase4_accepted": true,
+  "foundation_touch": false,
+  "verification_command": "cd runtime-execution-assurance-kernel && cargo test -p reak-observation && cargo test --workspace",
+  "exit_criteria": {
+    "if_obs_01_record_append_verify_recover": true,
+    "append_only_immutable": true,
+    "no_dispatch_or_reconciliation": true,
+    "unknown_first_class": true,
+    "multi_observation_no_collapse": true,
+    "hostile_property_concurrency_recovery": true,
+    "threat_model_and_security_review": true
+  },
+  "recommended_verdict": "ACCEPT_IMPLEMENTATION_PENDING_STAKEHOLDER_REVIEW"
+}

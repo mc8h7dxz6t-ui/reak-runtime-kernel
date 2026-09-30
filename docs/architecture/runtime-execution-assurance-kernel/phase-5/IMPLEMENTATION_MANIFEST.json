@@ -1,0 +1,32 @@
+{
+  "manifest_id": "reak-phase5-observation",
+  "version": "0.1.0",
+  "status": "IMPLEMENTATION_COMPLETE",
+  "completed_at": "2026-09-30",
+  "crate": "reak-observation",
+  "interface": "IF-OBS-01",
+  "operations": ["record", "append", "verify", "recover_from_log"],
+  "foundation_dependencies": [
+    "reak-durable-record",
+    "reak-replay",
+    "reak-types"
+  ],
+  "excluded": [
+    "reak-dispatch",
+    "reak-commitment",
+    "reak-reconciliation",
+    "adapters",
+    "network",
+    "providers"
+  ],
+  "test_counts": {
+    "obs_flow": 3,
+    "obs_hostile": 5,
+    "obs_recovery": 3,
+    "obs_concurrency": 2,
+    "obs_proptest": 3,
+    "obs_state_machine": 1,
+    "total_integration": 17
+  },
+  "claims": { "qualification": false, "production": false }
+}
