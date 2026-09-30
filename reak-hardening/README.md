@@ -22,6 +22,8 @@ RECOMMENDATION. Land REAK implementation + populate `manifest.json` modules[], v
 
 Deliver intake to this directory as `reak-hardening/intake/manifest.json` and `reak-hardening/intake/BUILD.md`.
 
+**Canonical layout:** REAK implementation in one Rust repo; Hardening has no codebase of its own and attaches read-only to that repo. See [programme-layout.md](programme-layout.md).
+
 ## Deliverables
 
 | Document | Purpose |

@@ -12,11 +12,14 @@
   },
   "implementation": {
     "present": false,
+    "canonical_model": "REAK Runtime lives in a dedicated Rust repository; Hardening consumes it read-only at a pinned SHA (see programme-layout.md). This workspace is not that repository.",
     "intake_directory_configured": "/workspace/reak-hardening/intake",
     "implementation_root": null,
+    "canonical_reak_repository": null,
+    "access_mode": "read_only",
     "submodule": null,
     "worktree": null,
-    "evidence": "No Cargo.toml, go.mod, package.json, or kernel source files under /workspace after git pull. See connection-report.md."
+    "evidence": "No REAK Rust workspace in connected tree. See connection-report.md and programme-layout.md."
   },
   "modules": []
 }
