@@ -11,3 +11,5 @@ Conclusions use vendor documentation, a regulatory text, an SEC order, practitio
 7. [Positioning](07-positioning.md)
 
 Bottom line from those sources: per-call runtime authorization is a real, already-staffed problem. Duplicate external effects are a real problem whose published fix is idempotency plus not retrying. A separate product category for consequence governance is not supported. Independent evidence as a thing customers buy is not supported. The defensible sentence is a constraint inside the gateway and the workflow the buyer already has.
+
+8. [Programme reality](08-programme-reality.md) — verdict: integrate instead of platform.

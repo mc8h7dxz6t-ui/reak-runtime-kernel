@@ -22,4 +22,4 @@ This repository is a design freeze, not a runtime yet. Implementation starts fro
 
 [ROADMAP-FREEZE-REVIEW.md](ROADMAP-FREEZE-REVIEW.md) rejects a later freeze proposal that reopened qualified packages and put EvidenceLab in front of CCS.
 
-[External validation](docs/evp/README.md) tests the same problem against vendor docs, incidents, and regulation. It does not use internal architecture as evidence.
+[External validation](docs/evp/README.md) tests the same problem against vendor docs, incidents, and regulation. It does not use internal architecture as evidence. The programme-reality verdict is to integrate the remaining behaviour into existing platforms rather than build another one.
