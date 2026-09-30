@@ -115,8 +115,11 @@ See [phase-1/PROGRAMME_TRIAD_BOUNDARIES.md](./phase-1/PROGRAMME_TRIAD_BOUNDARIES
 | Phase 5 — Observation engine | **ACCEPTED / FROZEN** | [phase-5/REAK_PHASE5_GATE_PROPOSAL.json](./phase-5/REAK_PHASE5_GATE_PROPOSAL.json) |
 | Phase 6 — Reconciliation engine | **ACCEPTED / FROZEN** | [phase-6/REAK_PHASE6_GATE_PROPOSAL.json](./phase-6/REAK_PHASE6_GATE_PROPOSAL.json) |
 | Phase 7 — Truth engine | **ACCEPTED / FROZEN** | [phase-7/REAK_PHASE7_GATE_PROPOSAL.json](./phase-7/REAK_PHASE7_GATE_PROPOSAL.json) |
-| Phase 8 — Recovery engine | **Gate proposed** | [phase-8/REAK_PHASE8_GATE_PROPOSAL.json](./phase-8/REAK_PHASE8_GATE_PROPOSAL.json) |
-| Phase 9 — Progression engine | **Gate proposed** | [phase-9/REAK_PHASE9_GATE_PROPOSAL.json](./phase-9/REAK_PHASE9_GATE_PROPOSAL.json) |
+| Phase 8 — Recovery engine | **ACCEPTED / FROZEN** | [phase-8/REAK_PHASE8_GATE_PROPOSAL.json](./phase-8/REAK_PHASE8_GATE_PROPOSAL.json) |
+| Phase 9 — Progression engine | **ACCEPTED / FROZEN** | [phase-9/REAK_PHASE9_GATE_PROPOSAL.json](./phase-9/REAK_PHASE9_GATE_PROPOSAL.json) |
+| **Kernel v1.0.0** | **FROZEN (golden tag)** | [REAK_KERNEL_V1_FREEZE.json](./REAK_KERNEL_V1_FREEZE.json) |
+
+**Post–Phase 9:** No new runtime modules in the kernel repository. Adapters and cloud integrations belong in **reak-platform**; experiments in **reak-research**. See [KERNEL_V1_GOLDEN_CLONE.md](./KERNEL_V1_GOLDEN_CLONE.md) and [ARCHITECTURAL_FREEZE_REVIEW.md](./ARCHITECTURAL_FREEZE_REVIEW.md).
 
 ---
 
@@ -132,3 +135,5 @@ See [phase-1/PROGRAMME_TRIAD_BOUNDARIES.md](./phase-1/PROGRAMME_TRIAD_BOUNDARIES
 - [phase-7/README.md](./phase-7/README.md)
 - [phase-8/README.md](./phase-8/README.md)
 - [phase-9/README.md](./phase-9/README.md)
+- [KERNEL_V1_GOLDEN_CLONE.md](./KERNEL_V1_GOLDEN_CLONE.md)
+- [ARCHITECTURAL_FREEZE_REVIEW.md](./ARCHITECTURAL_FREEZE_REVIEW.md)

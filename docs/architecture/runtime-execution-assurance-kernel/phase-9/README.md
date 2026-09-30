@@ -1,5 +1,7 @@
 # Phase 9 — Progression engine (IF-PRG-01)
 
+**Status:** **ACCEPTED / FROZEN** (2026-09-30)
+
 Final runtime decision engine: classifies the next **legally admissible** step from immutable Truth and Recovery inputs. Progression never dispatches, observes, recovers, or mutates prior history.
 
 | Document | Purpose |

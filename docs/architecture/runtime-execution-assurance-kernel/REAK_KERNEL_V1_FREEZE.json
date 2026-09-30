@@ -1,0 +1,41 @@
+{
+  "freeze_id": "reak-kernel-v1.0.0",
+  "status": "FROZEN",
+  "frozen_at": "2026-09-30",
+  "git_tag": "v1.0.0",
+  "cargo_workspace_version": "1.0.0",
+  "architectural_freeze_review": "./ARCHITECTURAL_FREEZE_REVIEW.md",
+  "golden_clone_programme": "./KERNEL_V1_GOLDEN_CLONE.md",
+  "spine_complete": true,
+  "execution_boundary": "reak-dispatch only",
+  "reasoning_phases": [
+    "reak-observation",
+    "reak-reconciliation",
+    "reak-truth",
+    "reak-recovery",
+    "reak-progression"
+  ],
+  "phase_gates": {
+    "phase_1": "ACCEPTED_FROZEN",
+    "phase_2": "ACCEPTED_FROZEN",
+    "phase_3": "ACCEPTED_FROZEN",
+    "phase_4": "ACCEPTED_FROZEN",
+    "phase_5": "ACCEPTED_FROZEN",
+    "phase_6": "ACCEPTED_FROZEN",
+    "phase_7": "ACCEPTED_FROZEN",
+    "phase_8": "ACCEPTED_FROZEN",
+    "phase_9": "ACCEPTED_FROZEN"
+  },
+  "downstream_repos": {
+    "reak-runtime-kernel": "fixes_only",
+    "reak-platform": "commercial_integrations",
+    "reak-research": "experimental"
+  },
+  "kernel_repo_rules": {
+    "no_new_runtime_modules": true,
+    "no_adapters": true,
+    "no_providers": true,
+    "no_cloud_integrations": true
+  },
+  "verification_command": "cd runtime-execution-assurance-kernel && cargo test --workspace"
+}

@@ -1,7 +1,9 @@
 {
   "gate_id": "reak-phase8-recovery",
-  "status": "PROPOSED",
+  "status": "ACCEPTED_FROZEN",
   "proposed_at": "2026-09-30",
+  "accepted_at": "2026-09-30",
+  "stakeholder_verdict": "ACCEPT FROZEN",
   "phase7_frozen": true,
   "verification_command": "cd runtime-execution-assurance-kernel && cargo test -p reak-recovery && cargo test --workspace",
   "exit_criteria": {
@@ -10,6 +12,5 @@
     "no_dispatch_no_truth_mutation": true,
     "authorizes_execution_false": true,
     "deterministic_strategy": true
-  },
-  "recommended_verdict": "ACCEPT_IMPLEMENTATION_PENDING_STAKEHOLDER_REVIEW"
+  }
 }

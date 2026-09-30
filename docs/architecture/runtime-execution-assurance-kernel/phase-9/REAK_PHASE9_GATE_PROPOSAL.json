@@ -1,7 +1,9 @@
 {
   "gate_id": "reak-phase9-progression",
-  "status": "PROPOSED",
+  "status": "ACCEPTED_FROZEN",
   "proposed_at": "2026-09-30",
+  "accepted_at": "2026-09-30",
+  "stakeholder_verdict": "ACCEPT FROZEN",
   "interface_id": "IF-PRG-01",
   "phases_1_through_8_frozen": true,
   "verification_command": "cd runtime-execution-assurance-kernel && cargo test -p reak-progression && cargo test --workspace",
@@ -18,17 +20,5 @@
     "allowed_states_complete": true,
     "hostile_and_property_tests": true,
     "concurrency_and_crash_recovery_tests": true
-  },
-  "artifacts": [
-    "IMPLEMENTATION_REPORT.md",
-    "PROGRESSION_MODEL.md",
-    "STATE_MACHINE.md",
-    "THREAT_MODEL.md",
-    "SECURITY_REVIEW.md",
-    "HOSTILE_REPORT.md",
-    "PROPERTY_REPORT.md",
-    "PERFORMANCE_REPORT.md",
-    "IMPLEMENTATION_MANIFEST.json"
-  ],
-  "recommended_verdict": "ACCEPT_IMPLEMENTATION_PENDING_STAKEHOLDER_REVIEW"
+  }
 }
