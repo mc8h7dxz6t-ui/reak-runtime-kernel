@@ -17,3 +17,5 @@ This repository is a design freeze, not a runtime yet. Implementation starts fro
 [TRACEABILITY.md](TRACEABILITY.md) maps each frozen constitutional article to CCS scenarios, evidence, and ownership. It does not add articles or components.
 
 [IQ-009.md](IQ-009.md) is the qualification verdict for IQ-009.
+
+[ROADMAP-REVIEW.md](ROADMAP-REVIEW.md) records whether later accepted evidence changes the implementation roadmap. It does not change the constitution.
