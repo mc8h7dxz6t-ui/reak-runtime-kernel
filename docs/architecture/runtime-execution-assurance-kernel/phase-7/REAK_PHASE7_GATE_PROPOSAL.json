@@ -1,6 +1,7 @@
 {
   "gate_id": "reak-phase7-truth",
-  "status": "PROPOSED",
+  "status": "ACCEPTED",
+  "accepted_at": "2026-09-30",
   "proposed_at": "2026-09-30",
   "phase6_accepted": true,
   "foundation_touch": false,

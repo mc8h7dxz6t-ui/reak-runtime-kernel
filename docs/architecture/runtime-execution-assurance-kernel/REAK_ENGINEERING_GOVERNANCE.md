@@ -114,7 +114,7 @@ See [phase-1/PROGRAMME_TRIAD_BOUNDARIES.md](./phase-1/PROGRAMME_TRIAD_BOUNDARIES
 | Phase 4 — Dispatch engine | **ACCEPTED / FROZEN** | [phase-4/REAK_PHASE4_GATE_PROPOSAL.json](./phase-4/REAK_PHASE4_GATE_PROPOSAL.json) |
 | Phase 5 — Observation engine | **ACCEPTED / FROZEN** | [phase-5/REAK_PHASE5_GATE_PROPOSAL.json](./phase-5/REAK_PHASE5_GATE_PROPOSAL.json) |
 | Phase 6 — Reconciliation engine | **ACCEPTED / FROZEN** | [phase-6/REAK_PHASE6_GATE_PROPOSAL.json](./phase-6/REAK_PHASE6_GATE_PROPOSAL.json) |
-| Phase 7 — Truth engine | **Gate proposed** | [phase-7/REAK_PHASE7_GATE_PROPOSAL.json](./phase-7/REAK_PHASE7_GATE_PROPOSAL.json) |
+| Phase 7 — Truth engine | **ACCEPTED / FROZEN** | [phase-7/REAK_PHASE7_GATE_PROPOSAL.json](./phase-7/REAK_PHASE7_GATE_PROPOSAL.json) |
 
 ---
 

@@ -1,6 +1,6 @@
 # REAK Phase 7 — Truth engine
 
-**Status:** Implementation complete — gate **PROPOSED**  
+**Status:** **ACCEPTED / FROZEN** (bug fixes only)  
 **Contract:** IF-TRU-01 (`reak-truth`)
 
 ## Scope
