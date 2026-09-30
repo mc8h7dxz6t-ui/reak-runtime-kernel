@@ -1,6 +1,10 @@
 # Runtime Execution Assurance Kernel (REAK)
 
-Production runtime implementation. Architecture and admission: `../docs/architecture/runtime-execution-assurance-kernel/`.
+**Canonical Rust repository** for REAK runtime implementation (`reak-*` workspace).
+
+Programme architecture, gates, and governance: `../docs/architecture/runtime-execution-assurance-kernel/` (see `REPOSITORY_PROGRAMME_TOPOLOGY.md`).
+
+Qualification Kernel, EvidenceLab, and Hardening **do not** duplicate this tree; they pin this repo read-only (Hardening) or call public APIs/exports only.
 
 ## Phase 2 — Foundation
 

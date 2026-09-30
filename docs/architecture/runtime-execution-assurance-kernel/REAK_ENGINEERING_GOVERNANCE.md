@@ -89,9 +89,18 @@ Phase 1 admitted modules are grandfathered but remain subject to **removal** if 
 | **REAK** | Production runtime planes + host integration |
 | **Qualification Kernel** | CCS, HRT, IQ execution, fuzz/chaos/mutation |
 | **EvidenceLab** | Reports, certificates, verification of exported evidence |
+| **Hardening** | Campaigns and residual-risk analysis at **pinned REAK revisions** (no runtime repo) |
 | **Legacy Archive** | Consequence II (read-only reference) |
 
-See [phase-1/PROGRAMME_TRIAD_BOUNDARIES.md](./phase-1/PROGRAMME_TRIAD_BOUNDARIES.md).
+See [phase-1/PROGRAMME_TRIAD_BOUNDARIES.md](./phase-1/PROGRAMME_TRIAD_BOUNDARIES.md). **Repository placement:** [REPOSITORY_PROGRAMME_TOPOLOGY.md](./REPOSITORY_PROGRAMME_TOPOLOGY.md).
+
+---
+
+## Repository rule (canonical runtime)
+
+- **REAK Runtime** = **one canonical Rust repository** (sole writer for `reak-*` implementation).
+- **Qualification Kernel** and **EvidenceLab** = **separate repositories**; depend on REAK contracts/exports only.
+- **Hardening** = **no repository**; consumes the canonical REAK repo **read-only** at an explicit revision pin—never a duplicate codebase.
 
 ---
 
@@ -100,14 +109,14 @@ See [phase-1/PROGRAMME_TRIAD_BOUNDARIES.md](./phase-1/PROGRAMME_TRIAD_BOUNDARIES
 | Phase | Status | Gate |
 |-------|--------|------|
 | Phase 1 — Architecture & admission | **ACCEPTED / FROZEN** | [phase-1/REAK_PHASE1_GATE.json](./phase-1/REAK_PHASE1_GATE.json) |
-| Phase 2 — Foundation substrate | **AUTHORIZED** | Stabilise durable record, policy context, UES, registry, replay, authority, exposure **before** Commitment |
-
-Phase 2 entry: this governance document + accepted Phase 1 gate. No Commitment (R4) implementation until foundation interfaces are stable and qualification stubs exist in Qualification Kernel.
+| Phase 2 — Foundation substrate | **ACCEPTED / FROZEN** | [phase-2/REAK_PHASE2_GATE_PROPOSAL.json](./phase-2/REAK_PHASE2_GATE_PROPOSAL.json) |
+| Phase 3 — Commitment engine | **Gate proposed** | [phase-3/REAK_PHASE3_GATE_PROPOSAL.json](./phase-3/REAK_PHASE3_GATE_PROPOSAL.json) |
 
 ---
 
 ## Related documents
 
-- [REAK_ENGINEERING_GOVERNANCE.md](./REAK_ENGINEERING_GOVERNANCE.md) (this file)
+- [REPOSITORY_PROGRAMME_TOPOLOGY.md](./REPOSITORY_PROGRAMME_TOPOLOGY.md)
 - [phase-1/README.md](./phase-1/README.md)
 - [phase-2/README.md](./phase-2/README.md)
+- [phase-3/README.md](./phase-3/README.md)
