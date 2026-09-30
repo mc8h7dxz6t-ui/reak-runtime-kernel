@@ -1,0 +1,20 @@
+{
+  "gate_id": "reak-phase6-reconciliation",
+  "status": "PROPOSED",
+  "proposed_at": "2026-09-30",
+  "phase1_unmodified": true,
+  "phase2_frozen": true,
+  "phase3_frozen": true,
+  "phase4_frozen": true,
+  "phase5_accepted": true,
+  "foundation_touch": false,
+  "verification_command": "cd runtime-execution-assurance-kernel && cargo test -p reak-reconciliation && cargo test --workspace",
+  "exit_criteria": {
+    "if_rec_01_compare_emit": true,
+    "no_truth_or_dispatch": true,
+    "conflict_not_collapsed": true,
+    "unknown_not_inferred": true,
+    "hostile_and_property_tests": true
+  },
+  "recommended_verdict": "ACCEPT_IMPLEMENTATION_PENDING_STAKEHOLDER_REVIEW"
+}

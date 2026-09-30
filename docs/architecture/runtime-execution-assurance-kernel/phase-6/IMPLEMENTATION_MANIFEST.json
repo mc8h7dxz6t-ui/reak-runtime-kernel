@@ -1,0 +1,30 @@
+{
+  "manifest_id": "reak-phase6-reconciliation",
+  "version": "0.1.0",
+  "status": "IMPLEMENTATION_COMPLETE",
+  "completed_at": "2026-09-30",
+  "crate": "reak-reconciliation",
+  "interface": "IF-REC-01",
+  "operations": [
+    "compare_expected_observed",
+    "emit_mismatch",
+    "verify",
+    "recover_from_log"
+  ],
+  "dependencies": [
+    "reak-observation",
+    "reak-ues",
+    "reak-durable-record",
+    "reak-replay",
+    "reak-types"
+  ],
+  "excluded": ["reak-truth", "reak-dispatch", "adapters", "network"],
+  "test_counts": {
+    "rec_flow": 2,
+    "rec_hostile": 3,
+    "rec_recovery": 2,
+    "rec_proptest": 1,
+    "total_integration": 8
+  },
+  "claims": { "qualification": false, "production": false }
+}
