@@ -1,6 +1,6 @@
 # REAK Phase 3 — Commitment engine
 
-**Status:** Implementation complete — gate **PROPOSED**  
+**Status:** **ACCEPTED / FROZEN** (bug fixes only)  
 **Contract:** IF-CMT-01 (`reak-commitment`)
 
 ## Scope

@@ -342,6 +342,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "reak-dispatch"
+version = "0.1.0"
+dependencies = [
+ "parking_lot",
+ "proptest",
+ "reak-authority",
+ "reak-commitment",
+ "reak-durable-record",
+ "reak-exposure",
+ "reak-policy-context",
+ "reak-replay",
+ "reak-types",
+ "reak-ues",
+ "serde",
+ "serde_json",
+ "sha2",
+ "thiserror",
+]
+
+[[package]]
 name = "reak-durable-record"
 version = "0.1.0"
 dependencies = [

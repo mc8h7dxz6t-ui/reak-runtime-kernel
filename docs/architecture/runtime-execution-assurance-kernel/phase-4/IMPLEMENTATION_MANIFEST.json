@@ -1,0 +1,42 @@
+{
+  "manifest_id": "reak-phase4-dispatch",
+  "version": "0.1.0",
+  "status": "IMPLEMENTATION_COMPLETE",
+  "completed_at": "2026-09-30",
+  "crate": "reak-dispatch",
+  "interface": "IF-DSP-01",
+  "operations": [
+    "issue_ticket",
+    "execute_once",
+    "ack_or_nack",
+    "recover_from_log",
+    "verify_no_second_release"
+  ],
+  "foundation_dependencies": [
+    "reak-durable-record",
+    "reak-policy-context",
+    "reak-ues",
+    "reak-authority",
+    "reak-exposure",
+    "reak-replay",
+    "reak-commitment"
+  ],
+  "excluded": [
+    "adapters",
+    "providers",
+    "network_transports",
+    "cloud_sdks",
+    "reak-observation",
+    "qualification",
+    "evidence_reports"
+  ],
+  "test_counts": {
+    "dsp_flow": 2,
+    "dsp_hostile": 4,
+    "dsp_recovery": 3,
+    "dsp_state_machine": 3,
+    "dsp_proptest": 3,
+    "total_integration": 15
+  },
+  "claims": { "qualification": false, "production": false }
+}

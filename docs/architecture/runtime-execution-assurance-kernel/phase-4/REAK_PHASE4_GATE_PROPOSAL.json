@@ -1,0 +1,20 @@
+{
+  "gate_id": "reak-phase4-dispatch",
+  "status": "PROPOSED",
+  "proposed_at": "2026-09-30",
+  "phase1_unmodified": true,
+  "phase2_frozen": true,
+  "phase3_accepted": true,
+  "foundation_touch": false,
+  "verification_command": "cd runtime-execution-assurance-kernel && cargo test -p reak-dispatch && cargo test --workspace",
+  "exit_criteria": {
+    "if_dsp_01_issue_execute_ack": true,
+    "sole_dispatch_owner": true,
+    "no_adapters_or_network": true,
+    "state_machine_documented": true,
+    "hostile_and_property_tests": true,
+    "unknown_no_auto_redispatch": true,
+    "threat_model_and_security_review": true
+  },
+  "recommended_verdict": "ACCEPT_IMPLEMENTATION_PENDING_STAKEHOLDER_REVIEW"
+}

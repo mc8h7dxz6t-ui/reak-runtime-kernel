@@ -110,7 +110,8 @@ See [phase-1/PROGRAMME_TRIAD_BOUNDARIES.md](./phase-1/PROGRAMME_TRIAD_BOUNDARIES
 |-------|--------|------|
 | Phase 1 — Architecture & admission | **ACCEPTED / FROZEN** | [phase-1/REAK_PHASE1_GATE.json](./phase-1/REAK_PHASE1_GATE.json) |
 | Phase 2 — Foundation substrate | **ACCEPTED / FROZEN** | [phase-2/REAK_PHASE2_GATE_PROPOSAL.json](./phase-2/REAK_PHASE2_GATE_PROPOSAL.json) |
-| Phase 3 — Commitment engine | **Gate proposed** | [phase-3/REAK_PHASE3_GATE_PROPOSAL.json](./phase-3/REAK_PHASE3_GATE_PROPOSAL.json) |
+| Phase 3 — Commitment engine | **ACCEPTED / FROZEN** | [phase-3/REAK_PHASE3_GATE_PROPOSAL.json](./phase-3/REAK_PHASE3_GATE_PROPOSAL.json) |
+| Phase 4 — Dispatch engine | **Gate proposed** | [phase-4/REAK_PHASE4_GATE_PROPOSAL.json](./phase-4/REAK_PHASE4_GATE_PROPOSAL.json) |
 
 ---
 
@@ -120,3 +121,4 @@ See [phase-1/PROGRAMME_TRIAD_BOUNDARIES.md](./phase-1/PROGRAMME_TRIAD_BOUNDARIES
 - [phase-1/README.md](./phase-1/README.md)
 - [phase-2/README.md](./phase-2/README.md)
 - [phase-3/README.md](./phase-3/README.md)
+- [phase-4/README.md](./phase-4/README.md)
