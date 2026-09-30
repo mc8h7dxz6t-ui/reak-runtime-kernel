@@ -116,6 +116,7 @@ See [phase-1/PROGRAMME_TRIAD_BOUNDARIES.md](./phase-1/PROGRAMME_TRIAD_BOUNDARIES
 | Phase 6 — Reconciliation engine | **ACCEPTED / FROZEN** | [phase-6/REAK_PHASE6_GATE_PROPOSAL.json](./phase-6/REAK_PHASE6_GATE_PROPOSAL.json) |
 | Phase 7 — Truth engine | **ACCEPTED / FROZEN** | [phase-7/REAK_PHASE7_GATE_PROPOSAL.json](./phase-7/REAK_PHASE7_GATE_PROPOSAL.json) |
 | Phase 8 — Recovery engine | **Gate proposed** | [phase-8/REAK_PHASE8_GATE_PROPOSAL.json](./phase-8/REAK_PHASE8_GATE_PROPOSAL.json) |
+| Phase 9 — Progression engine | **Gate proposed** | [phase-9/REAK_PHASE9_GATE_PROPOSAL.json](./phase-9/REAK_PHASE9_GATE_PROPOSAL.json) |
 
 ---
 
@@ -130,3 +131,4 @@ See [phase-1/PROGRAMME_TRIAD_BOUNDARIES.md](./phase-1/PROGRAMME_TRIAD_BOUNDARIES
 - [phase-6/README.md](./phase-6/README.md)
 - [phase-7/README.md](./phase-7/README.md)
 - [phase-8/README.md](./phase-8/README.md)
+- [phase-9/README.md](./phase-9/README.md)

@@ -1,0 +1,44 @@
+{
+  "manifest_id": "reak-phase9-progression",
+  "version": "0.1.0",
+  "status": "IMPLEMENTATION_COMPLETE",
+  "crate": "reak-progression",
+  "interface": "IF-PRG-01",
+  "operations": ["determine_next_step", "verify", "recover_from_log"],
+  "dependencies": [
+    "reak-types",
+    "reak-durable-record",
+    "reak-replay",
+    "reak-truth",
+    "reak-recovery"
+  ],
+  "progression_states": [
+    "Terminal",
+    "Await",
+    "RetryPermitted",
+    "CompensationPermitted",
+    "HumanApprovalRequired",
+    "Abort",
+    "NoFurtherAction"
+  ],
+  "stream_id_hex": "0x00505247",
+  "test_counts": {
+    "prg_flow": 3,
+    "prg_hostile": 4,
+    "prg_recovery": 1,
+    "prg_concurrency": 2,
+    "prg_proptest": 1,
+    "prg_performance": 1,
+    "total_integration": 12
+  },
+  "invariants": [
+    "no_dispatch",
+    "no_observation",
+    "no_recovery_execution",
+    "no_truth_mutation",
+    "no_recovery_mutation",
+    "append_only_progression_records",
+    "deterministic_classification",
+    "authorizes_execution_false_on_inputs"
+  ]
+}

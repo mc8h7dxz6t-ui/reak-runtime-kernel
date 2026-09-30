@@ -15,6 +15,7 @@ members = [
     "crates/reak-reconciliation",
     "crates/reak-truth",
     "crates/reak-recovery",
+    "crates/reak-progression",
 ]
 [workspace.package]
 version = "0.1.0"
@@ -36,6 +37,7 @@ reak-observation = { path = "crates/reak-observation" }
 reak-reconciliation = { path = "crates/reak-reconciliation" }
 reak-truth = { path = "crates/reak-truth" }
 reak-recovery = { path = "crates/reak-recovery" }
+reak-progression = { path = "crates/reak-progression" }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 sha2 = "0.10"

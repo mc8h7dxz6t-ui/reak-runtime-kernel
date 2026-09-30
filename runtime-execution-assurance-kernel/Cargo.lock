@@ -422,6 +422,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "reak-progression"
+version = "0.1.0"
+dependencies = [
+ "hex",
+ "parking_lot",
+ "proptest",
+ "reak-durable-record",
+ "reak-recovery",
+ "reak-replay",
+ "reak-truth",
+ "reak-types",
+ "serde",
+ "serde_json",
+ "sha2",
+ "thiserror",
+]
+
+[[package]]
 name = "reak-reconciliation"
 version = "0.1.0"
 dependencies = [
