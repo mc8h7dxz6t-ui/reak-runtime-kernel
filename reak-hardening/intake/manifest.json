@@ -1,0 +1,22 @@
+{
+  "programme": "REAK-HARDENING",
+  "phase": "2B",
+  "connection_status": "BLOCKED",
+  "repository": {
+    "identity": "origin.cursor.com/git/philip-macleod-dev/tmp-db34ee8b37f8bab7",
+    "remote_url_public": "https://origin.cursor.com/git/philip-macleod-dev/tmp-db34ee8b37f8bab7.git",
+    "branch": "main",
+    "commit_sha": "f0c11c2f149a2e90abc7b4037ae8546bd710bcb4",
+    "commit_subject": "Update hardening reports for Phase 2 blocked gate",
+    "scanned_at_utc": "2026-09-30T20:31:00Z"
+  },
+  "implementation": {
+    "present": false,
+    "intake_directory_configured": "/workspace/reak-hardening/intake",
+    "implementation_root": null,
+    "submodule": null,
+    "worktree": null,
+    "evidence": "No Cargo.toml, go.mod, package.json, or kernel source files under /workspace after git pull. See connection-report.md."
+  },
+  "modules": []
+}

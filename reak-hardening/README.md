@@ -8,9 +8,10 @@ This workstream maximises structural quality. It does not redesign architecture,
 
 FACT. Phase 2 scan (`intake/phase2-scan.md`): no kernel source tree and no `intake/manifest.json` in the connected repository after `git pull`.
 
-**Gate: HARDENING_PHASE2_BLOCKED** (`PHASE2-GATE.md`).
+**Gate Phase 2:** `HARDENING_PHASE2_BLOCKED` (`PHASE2-GATE.md`).  
+**Gate Phase 2B (connect):** **BLOCKED** (`PHASE2B-GATE.md`). Intake: `intake/manifest.json`, `intake/BUILD.md`, `intake/connection-report.md`.
 
-RECOMMENDATION. Supply manifest + source, then re-run Phase 2 for one `modules/<name>.md` per implemented module.
+RECOMMENDATION. Land REAK implementation + populate `manifest.json` modules[], verify build in `BUILD.md`, then set Phase 2B to CONNECTED before Phase 3 review.
 
 ## Intake (required before module reviews)
 
