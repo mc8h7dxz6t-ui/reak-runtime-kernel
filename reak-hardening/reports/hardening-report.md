@@ -2,44 +2,47 @@
 
 Programme: REAK hardening. Scope: structural quality under frozen architecture.
 
+## Phase 2 status
+
+**HARDENING_PHASE2_BLOCKED**
+
+See `../PHASE2-GATE.md`. Connected repository contains **no implemented REAK modules** at scan time (`intake/phase2-scan.md`, `modules/_inventory.md`).
+
 ## Executive summary
 
-**Status: NOT EXECUTED against kernel modules.**
-
-Evidence: this repository contains no REAK implementation source. Per-module threat models, attack surfaces, and test results cannot be produced without intake (see `reak-hardening/README.md`).
+Phase 1: programme framework only. Phase 2: module-level adversarial review **not executed** on kernel code because no source or manifest exists in scope.
 
 ## Module coverage
 
-| Module | Review | Tests generated | Tests run |
-| --- | --- | --- | --- |
-| (none in repo) | NOT RUN | Catalogue only (`02-test-catalogue.md`) | NOT RUN |
+| Module | Structural | Security | Concurrency | Reliability | Tests reviewed |
+| --- | --- | --- | --- | --- | --- |
+| (none in repo) | NOT PRESENT | NOT PRESENT | NOT PRESENT | NOT PRESENT | INSUFFICIENT EVIDENCE |
 
-## Cross-programme findings (evidence-backed)
+## Cross-programme findings (unchanged, evidence-backed)
 
 ### H-001 — No review target in scope
 
-- **Problem.** Adversarial work cannot falsify the kernel if the kernel is not in the tree under review.
-- **Evidence.** Zero implementation files in `/workspace`; `git log` shows documentation commits only.
-- **Impact.** Any claim of “hardened” or “reviewed” is unauditable.
-- **Suggested change.** Add `reak-hardening/intake/manifest.json` pointing at module paths and pin commit SHA; CI job `reak-hardening-smoke` runs build + unit tests on every push to that path.
-- **Risk.** Low. Process only. Does not change kernel behaviour.
+- **Evidence:** `intake/phase2-scan.md`.
+- **Risk:** Critical.
+- **Impact:** Phase 2 cannot complete.
+- **Recommendation:** `intake/manifest.json` + source tree.
+- **Confidence:** High
 
 ### H-002 — Test catalogue not wired
 
-- **Problem.** Property, fuzz, and concurrency IDs exist only as specifications.
-- **Evidence.** `02-test-catalogue.md` has no corresponding `tests/` or `fuzz/` directories.
-- **Impact.** Regressions ship without hostile coverage.
-- **Suggested change.** When first module lands, require one property test and one fuzz target before merge to `main` for that module.
-- **Risk.** Medium. Early friction on velocity; reduces later incident cost.
+- **Evidence:** No `tests/` for REAK.
+- **Risk:** High once code lands without tests.
+- **Recommendation:** P-01, P-02, C-01, F-01 on first modules (`phase2-testing-gaps.md`).
+- **Confidence:** High
 
-## Architecture review (coupling, no redesign)
+## Phase 2 consolidated reports
 
-NOT RUN. No modules to map dependencies or public API size.
+- [Security](phase2-security-findings.md)
+- [Concurrency](phase2-concurrency-findings.md)
+- [Reliability](phase2-reliability-findings.md)
+- [Testing gaps](phase2-testing-gaps.md)
+- [Priority list](phase2-priority-list.md)
 
-## Complexity review
+## Architecture and complexity reviews
 
-NOT RUN.
-
-## Priority ordering
-
-See `recommended-fixes.md`.
+NOT RUN on implementation. See Phase 1 `architecture-review.md` and `complexity-review.md`.

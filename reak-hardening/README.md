@@ -6,11 +6,11 @@ This workstream maximises structural quality. It does not redesign architecture,
 
 ## Evidence status (this repository)
 
-FACT. As of the last scan of `/workspace`, there is no kernel source tree: no Rust, Go, TypeScript, Python, or C/C++ implementation files. Git history on `main` contains specification and programme documents only.
+FACT. Phase 2 scan (`intake/phase2-scan.md`): no kernel source tree and no `intake/manifest.json` in the connected repository after `git pull`.
 
-INFERENCE. Adversarial review of modules, fuzz targets, and crash simulations cannot be executed here until implementation artefacts are present in a named path, branch, or commit that this programme is authorised to review.
+**Gate: HARDENING_PHASE2_BLOCKED** (`PHASE2-GATE.md`).
 
-RECOMMENDATION. Treat the programme as **armed but idle**. Run intake (below) before claiming any module report is complete.
+RECOMMENDATION. Supply manifest + source, then re-run Phase 2 for one `modules/<name>.md` per implemented module.
 
 ## Intake (required before module reviews)
 
