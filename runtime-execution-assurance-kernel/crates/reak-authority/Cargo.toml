@@ -1,0 +1,20 @@
+[package]
+name = "reak-authority"
+description = "REAK foundation: scoped permission records (IF-AUTH-01)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+reak-types = { workspace = true }
+reak-durable-record = { workspace = true }
+reak-policy-context = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+parking_lot = { workspace = true }
+
+[dev-dependencies]
+proptest = { workspace = true }
+sha2 = { workspace = true }

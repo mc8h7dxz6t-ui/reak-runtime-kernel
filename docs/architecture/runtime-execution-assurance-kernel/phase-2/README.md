@@ -1,6 +1,6 @@
 # REAK Phase 2 — Foundation substrate
 
-**Status:** Authorized (not started)  
+**Status:** Implementation complete — gate **PROPOSED** ([REAK_PHASE2_GATE_PROPOSAL.json](./REAK_PHASE2_GATE_PROPOSAL.json))  
 **Governance:** [REAK_ENGINEERING_GOVERNANCE.md](../REAK_ENGINEERING_GOVERNANCE.md)
 
 ## Objective

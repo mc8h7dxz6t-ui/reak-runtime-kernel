@@ -1,0 +1,18 @@
+[package]
+name = "reak-registry"
+description = "REAK foundation: artifact index without correctness claims (IF-REG-01)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+reak-types = { workspace = true }
+reak-durable-record = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+parking_lot = { workspace = true }
+
+[dev-dependencies]
+proptest = { workspace = true }

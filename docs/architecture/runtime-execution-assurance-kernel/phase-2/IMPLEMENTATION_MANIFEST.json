@@ -1,0 +1,43 @@
+{
+  "manifest_id": "reak-phase2-foundation-implementation",
+  "version": "0.1.0",
+  "status": "IMPLEMENTATION_COMPLETE",
+  "completed_at": "2026-09-30",
+  "code_root": "runtime-execution-assurance-kernel",
+  "language": "rust",
+  "workspace_members": [
+    "reak-types",
+    "reak-durable-record",
+    "reak-policy-context",
+    "reak-ues",
+    "reak-registry",
+    "reak-replay",
+    "reak-authority",
+    "reak-exposure"
+  ],
+  "modules": [
+    { "module_id": "reak-durable-record", "crate": "reak-durable-record", "interface": "IF-DR-01" },
+    { "module_id": "reak-policy-context", "crate": "reak-policy-context", "interface": "IF-POL-01" },
+    { "module_id": "reak-uncertainty-ledger", "crate": "reak-ues", "interface": "IF-UES-01" },
+    { "module_id": "reak-registry", "crate": "reak-registry", "interface": "IF-REG-01" },
+    { "module_id": "reak-replay", "crate": "reak-replay", "interface": "IF-RPL-01" },
+    { "module_id": "reak-authority", "crate": "reak-authority", "interface": "IF-AUTH-01" },
+    { "module_id": "reak-exposure", "crate": "reak-exposure", "interface": "IF-EXP-01" }
+  ],
+  "explicit_exclusions": [
+    "reak-commitment",
+    "reak-dispatch",
+    "reak-observation",
+    "reak-reconciliation",
+    "reak-truth",
+    "reak-integration-host",
+    "qualification_kernel",
+    "evidencelab"
+  ],
+  "claims": {
+    "qualification": false,
+    "production": false,
+    "marketing": false
+  },
+  "phase1_immutable": true
+}

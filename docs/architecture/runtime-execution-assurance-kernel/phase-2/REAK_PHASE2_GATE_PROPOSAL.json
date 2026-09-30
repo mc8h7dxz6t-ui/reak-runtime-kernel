@@ -1,0 +1,32 @@
+{
+  "gate_id": "reak-phase2-foundation",
+  "version": "0.1.0",
+  "status": "PROPOSED",
+  "proposed_at": "2026-09-30",
+  "proposed_by": "REAK Chief Architect — Phase 2 implementation",
+  "scope": "Foundation modules only",
+  "phase1_unmodified": true,
+  "implementation_manifest": "IMPLEMENTATION_MANIFEST.json",
+  "evidence": {
+    "implementation_report": "IMPLEMENTATION_REPORT.md",
+    "module_completion": "MODULE_COMPLETION_REPORT.md",
+    "dependencies": "DEPENDENCY_REPORT.md",
+    "security_review": "SECURITY_REVIEW.md",
+    "test_report": "TEST_REPORT.md",
+    "hostile_test_report": "HOSTILE_TEST_REPORT.md",
+    "performance_notes": "PERFORMANCE_NOTES.md"
+  },
+  "verification_command": "cd runtime-execution-assurance-kernel && cargo test --workspace",
+  "exit_criteria": {
+    "seven_foundation_modules_implemented": true,
+    "no_commitment_dispatch_surfaces": true,
+    "dependency_acyclic": true,
+    "tests_passing": true,
+    "no_qualification_claims": true
+  },
+  "recommended_verdict": "ACCEPT_IMPLEMENTATION_PENDING_STAKEHOLDER_REVIEW",
+  "next_phase": {
+    "name": "Phase 3 — R4 Commitment (not authorized until Phase 2 gate accepted)",
+    "prerequisite": "Stakeholder acceptance of this gate; optional persistence adapter charter"
+  }
+}
