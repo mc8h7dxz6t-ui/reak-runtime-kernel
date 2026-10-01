@@ -1,0 +1,122 @@
+{
+  "inventory_id": "REAK-PIN-INVENTORY-PHASE2B",
+  "date": "2026-10-01",
+  "phase": "Phase 2B",
+  "status": "CONNECTED",
+  "canonical_reak_repository": "https://github.com/mc8h7dxz6t-ui/reak-runtime-kernel.git",
+  "canonical_reak_revision": "v1.0.0",
+  "canonical_reak_tag_object_sha": "953ee352ebca7f44c8f6394a528e47be5534bed7",
+  "canonical_reak_commit_sha": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
+  "phase2b_connected_evidence_commit_sha": "8be8fc392888040b7666b10be3eed969598989eb",
+  "phase2b_manifest_evidence_commit_sha": "0c68fb73eb12768d61d0915d3292812b718a1340",
+  "implementation_present_in_hardening_repo": false,
+  "phase3_started": false,
+  "modules_count": 15,
+  "modules": [
+    {
+      "crate": "reak-types",
+      "module": "types",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-types",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-durable-record",
+      "module": "durable-record",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-durable-record",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-policy-context",
+      "module": "policy-context",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-policy-context",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-ues",
+      "module": "ues",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-ues",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-registry",
+      "module": "registry",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-registry",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-replay",
+      "module": "replay",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-replay",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-authority",
+      "module": "authority",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-authority",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-exposure",
+      "module": "exposure",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-exposure",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-commitment",
+      "module": "commitment",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-commitment",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-dispatch",
+      "module": "dispatch",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-dispatch",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-observation",
+      "module": "observation",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-observation",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-reconciliation",
+      "module": "reconciliation",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-reconciliation",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-truth",
+      "module": "truth",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-truth",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-recovery",
+      "module": "recovery",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-recovery",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    },
+    {
+      "crate": "reak-progression",
+      "module": "progression",
+      "version": "1.0.0",
+      "path_in_reak_repository": "runtime-execution-assurance-kernel/crates/reak-progression",
+      "metadata_source": "cargo metadata from pinned REAK v1.0.0"
+    }
+  ]
+}

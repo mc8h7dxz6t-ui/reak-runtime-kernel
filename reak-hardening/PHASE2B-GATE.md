@@ -17,7 +17,7 @@ Phase 2B **connection/intake** only. This gate does **not** assert qualification
 | Locked tests on pinned checkout | Yes | **SUCCESS** |
 | Programme repo commit vs REAK pin distinguished | Yes | Programme `e7d82de…`; REAK peeled `65cea8f…` |
 | REAK source copied into programme repo | No (read-only model) | **Absent** — `implementation.present` = false |
-| Programme inventories under `inventories/` | Follow-up before Phase 3 | **Not yet generated** — see `inventories/README.md` |
+| Programme inventories under `inventories/` | Follow-up before Phase 3 | **Generated** (documentation/evidence only; does not start Phase 3) — `inventories/README.md`, `REAK_MODULE_INVENTORY.md`, `REAK_PIN_INVENTORY.json`, `PHASE3_PREREQUISITE_INVENTORY.md` |
 
 ## CONNECTED meaning (bounded)
 
