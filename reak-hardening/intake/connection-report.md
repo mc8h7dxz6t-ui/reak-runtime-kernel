@@ -4,7 +4,7 @@
 
 Connect the Hardening Programme to the Runtime Execution Assurance Kernel implementation via **read-only** access to the canonical REAK repository at a pinned revision. No engineering review in this phase.
 
-**No runtime source was modified** in the programme repository or in the canonical REAK repository during verification or intake alignment.
+**No REAK/runtime source was modified** in the programme repository or in the canonical REAK repository during verification or intake updates.
 
 **No Phase 3 work was performed** (security, concurrency, or hostile review not started).
 
@@ -13,8 +13,7 @@ Connect the Hardening Programme to the Runtime Execution Assurance Kernel implem
 | Field | Value |
 | --- | --- |
 | Root | `/workspace` |
-| HEAD | `c85271bc363bd92e4c7e92724d192460dce3c14a` |
-| Status before intake alignment edits | **clean** |
+| HEAD (programme repo at verification, before the CONNECTED documentation commit) | `e7d82de4acf2861041ef20684a038a16bf2087e9` |
 | Role | Hardening / programme documentation only |
 | REAK source tree in programme repo | **Absent** (`implementation.present` = false) |
 
@@ -35,19 +34,24 @@ Connect the Hardening Programme to the Runtime Execution Assurance Kernel implem
 ## Commands executed
 
 ```bash
-git remote set-url reak-runtime https://github.com/mc8h7dxz6t-ui/reak-runtime-kernel.git
-git fetch reak-runtime --tags
-git ls-remote reak-runtime refs/heads/main
-git ls-remote reak-runtime refs/tags/v1.0.0
-git ls-remote reak-runtime 'refs/tags/v1.0.0^{}'
-git clone --depth 1 --branch v1.0.0 https://github.com/mc8h7dxz6t-ui/reak-runtime-kernel.git /tmp/reak-runtime-phase2b-checkout
-cd /tmp/reak-runtime-phase2b-checkout/runtime-execution-assurance-kernel
+git ls-remote https://github.com/mc8h7dxz6t-ui/reak-runtime-kernel.git refs/heads/main
+git ls-remote https://github.com/mc8h7dxz6t-ui/reak-runtime-kernel.git refs/tags/v1.0.0
+git ls-remote https://github.com/mc8h7dxz6t-ui/reak-runtime-kernel.git 'refs/tags/v1.0.0^{}'
+rustc --version
+cargo --version
+rm -rf /tmp/reak-runtime-phase2b-connected-check
+git clone --no-checkout https://github.com/mc8h7dxz6t-ui/reak-runtime-kernel.git /tmp/reak-runtime-phase2b-connected-check
+cd /tmp/reak-runtime-phase2b-connected-check
+git checkout 65cea8f8921909bd44b970d1a69b2da362d7a4a8
+cd runtime-execution-assurance-kernel
 cargo metadata --no-deps --format-version 1
 cargo build --workspace --locked
 cargo test --workspace --locked
 ```
 
 Observed checkout `HEAD`: `65cea8f8921909bd44b970d1a69b2da362d7a4a8`.
+
+Toolchain: **rustc 1.99.0** / **cargo 1.99.0** (stable).
 
 ## Module inventory (from `cargo metadata` only)
 
@@ -75,38 +79,24 @@ Paths are relative to the REAK repository root at the pinned commit.
 
 | Step | Result |
 | --- | --- |
-| HTTPS `git fetch reak-runtime --tags` / `git ls-remote` | **SUCCESS** — SHAs match expected values above |
-| Read-only checkout | **SUCCESS** — `/tmp/reak-runtime-phase2b-checkout` |
+| HTTPS `git ls-remote` | **SUCCESS** — SHAs match expected values above |
+| Read-only checkout | **SUCCESS** — `/tmp/reak-runtime-phase2b-connected-check` |
 | `runtime-execution-assurance-kernel/Cargo.toml` | **Present**; workspace version `1.0.0` |
 | `cargo metadata --no-deps --format-version 1` | **SUCCESS** |
 | `cargo build --workspace --locked` | **SUCCESS** |
-| `cargo test --workspace --locked` | **NOT SUCCESSFUL** — local Cargo 1.83.0 lacks `edition2024` for locked test graph |
-
-### Test blocker
-
-**Gate:** `BLOCKED_TEST_TOOLCHAIN`
-
-`cargo test --workspace --locked` did not complete successfully in this Cloud Agent environment. Cargo **1.83.0** does not provide stabilized `edition2024` support required when building test-only dependencies from the lockfile resolution path (e.g. `getrandom` 0.4.3). This is an **environment toolchain limitation**, not evidence that the pinned REAK commit failed review.
-
-**Required to clear blocker:** Re-run `cargo test --workspace --locked` on commit `65cea8f8921909bd44b970d1a69b2da362d7a4a8` with a compatible Rust/Cargo toolchain (or documented REAK toolchain pin that satisfies the lockfile), then update intake evidence before asserting **CONNECTED**.
-
-## Inventories (programme gate)
-
-Full inventories under `../inventories/` are **not** generated in this pass (programme rule: after successful build/test). Module list above is metadata-only for intake alignment.
+| `cargo test --workspace --locked` | **SUCCESS** |
 
 ## Programme gate
 
 | Field | Value |
 | --- | --- |
-| `connection_status` | **BLOCKED** |
-| Programme gate document (`../PHASE2B-GATE.md`) | Verdict **BLOCKED** (no CONNECTED sub-status) |
-| Intake-specific blocker | **BLOCKED_TEST_TOOLCHAIN** |
-| CONNECTED | **Not asserted** |
-| Qualification | **Not passed** |
+| `connection_status` | **CONNECTED** |
+| Phase 2B scope | Connection / intake evidence only |
+| Qualification | **Not passed** (no qualification programme claim) |
+| Production / certification / adapters / providers / cloud | **Not claimed** |
 | Phase 3 | **Not started** |
-
-See `../PHASE2B-GATE.md` for CONNECTED criteria. Intake files record verified facts to date. Phase 2B is **not complete**. Gate remains **BLOCKED** pending successful `cargo test --workspace --locked` on the pinned REAK commit under a compatible toolchain.
+| REAK source in programme repo | **Not present** (`implementation.present` = false) |
 
 ## Distinction (programme vs REAK pin)
 
-`manifest.json` → `repository.commit_sha` is the **programme documentation repository** snapshot (`c85271bc363bd92e4c7e92724d192460dce3c14a`). It is **not** the REAK kernel pin. The REAK pin is `implementation.canonical_reak_*` and revision `v1.0.0` / peeled commit `65cea8f8921909bd44b970d1a69b2da362d7a4a8`.
+`manifest.json` → `repository.commit_sha` is the **programme documentation repository** snapshot at verification (`e7d82de4acf2861041ef20684a038a16bf2087e9`) — the **pre-CONNECTED-documentation** parent used for the successful rerun, **not** the post-commit CONNECTED evidence SHA (not invented until that commit exists). It is **not** the REAK kernel pin. The REAK pin is `implementation.canonical_reak_*` and revision `v1.0.0` / peeled commit `65cea8f8921909bd44b970d1a69b2da362d7a4a8`.

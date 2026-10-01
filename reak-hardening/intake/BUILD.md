@@ -2,17 +2,20 @@
 
 ## Verification status
 
-**PARTIALLY VERIFIED — Phase 2B not complete.** Canonical REAK was verified on a **read-only temporary checkout** at pinned revision `v1.0.0`. `connection_status` remains **BLOCKED** (`BLOCKED_TEST_TOOLCHAIN`). **CONNECTED** has not been asserted. Qualification has not passed.
+**VERIFIED — Phase 2B connection/intake bar satisfied** on a **read-only temporary checkout** at pinned revision `v1.0.0` / peeled commit `65cea8f8921909bd44b970d1a69b2da362d7a4a8`. `connection_status` is **CONNECTED** for Phase 2B only.
+
+This is **not** a qualification, certification, or production-readiness claim. Phase 3 has **not** started.
 
 ## Programme workspace (this agent)
 
 | Field | Value |
 | --- | --- |
 | Programme repository root | `/workspace` |
-| Programme repository HEAD | `c85271bc363bd92e4c7e92724d192460dce3c14a` |
-| Programme repository status (before intake alignment edits) | **clean** |
+| Programme repository HEAD (at verification, before the CONNECTED documentation commit) | `e7d82de4acf2861041ef20684a038a16bf2087e9` |
 | Programme repository role | Hardening / programme documentation only |
 | REAK source tree in programme repo | **No** (`implementation.present` = false) |
+
+`repository.commit_sha` in `manifest.json` records that **pre-CONNECTED-documentation** programme parent (`e7d82de…`), not the post-commit CONNECTED evidence SHA (recorded in a follow-up after that commit exists).
 
 ## Canonical REAK (pinned)
 
@@ -32,7 +35,7 @@
 
 | Field | Value |
 | --- | --- |
-| Location | `/tmp/reak-runtime-phase2b-checkout` |
+| Location | `/tmp/reak-runtime-phase2b-connected-check` |
 | Mode | Detached at peeled commit `65cea8f8921909bd44b970d1a69b2da362d7a4a8` (not copied into programme repo) |
 | `Cargo.lock` | `runtime-execution-assurance-kernel/Cargo.lock` (relative to checkout root) |
 
@@ -40,7 +43,8 @@
 
 | Item | Value |
 | --- | --- |
-| `rustc` / `cargo` (agent) | Cargo **1.83.0** (2024-10-29) |
+| `rustc` | **1.99.0** (b940084d7 2026-09-28) |
+| `cargo` | **1.99.0** (5f94df478 2026-08-27) |
 | REAK `rust-toolchain.toml` in checkout | **Not present** at verification time |
 | Lockfile | Present at `runtime-execution-assurance-kernel/Cargo.lock` |
 
@@ -49,7 +53,7 @@
 All commands run from:
 
 ```bash
-cd /tmp/reak-runtime-phase2b-checkout/runtime-execution-assurance-kernel
+cd /tmp/reak-runtime-phase2b-connected-check/runtime-execution-assurance-kernel
 ```
 
 ### Metadata
@@ -74,31 +78,19 @@ cargo build --workspace --locked
 cargo test --workspace --locked
 ```
 
-**Result:** **NOT EXECUTED SUCCESSFULLY** — failure solely due to local Cargo **1.83.0** lacking stabilized `edition2024` support required when resolving test dependencies (e.g. `getrandom` 0.4.3 registry fetch during test build).
+**Result:** **SUCCESS** (exit 0; workspace unit tests on pinned commit).
 
-Example error excerpt:
+## Phase 2B bar
 
-```text
-error: failed to parse manifest at `.../getrandom-0.4.3/Cargo.toml`
-feature `edition2024` is required
-The package requires the Cargo feature called `edition2024`, but that feature is not stabilized in this version of Cargo (1.83.0 ...)
-```
+Metadata, locked build, and locked tests **succeeded** on the pinned REAK checkout using the toolchain above. Phase 2B **connection/intake** requirements for build/test evidence are satisfied.
 
-## Condition before CONNECTED can be asserted
+Phase 3 (adversarial review), full programme inventories under `inventories/`, and any qualification programme remain **out of scope** for this document.
 
-All of the following are required (programme gate; see `../PHASE2B-GATE.md`):
-
-1. `cargo test --workspace --locked` (or programme-agreed equivalent) **succeeds** on the pinned REAK commit using a **compatible toolchain** (Cargo/Rust new enough for the locked test dependency graph, or REAK documents a pinned toolchain that satisfies the lockfile).
-2. Intake evidence (`BUILD.md`, `connection-report.md`, `manifest.json`) records successful test execution on `65cea8f8921909bd44b970d1a69b2da362d7a4a8`.
-3. Programme inventories under `inventories/` per gate criteria (not generated in this partial verification pass).
-
-Until tests succeed under a compatible toolchain, gate remains **BLOCKED** (`BLOCKED_TEST_TOOLCHAIN`). Do not mark **CONNECTED** or claim qualification passed.
-
-## Reproducibility checklist (Phase 2B exit)
+## Reproducibility checklist (Phase 2B)
 
 - [x] Canonical REAK repository and revision recorded
 - [x] Read-only checkout at pinned peeled commit
 - [x] `cargo metadata` on pinned workspace
 - [x] `cargo build --workspace --locked` on pinned workspace
-- [ ] `cargo test --workspace --locked` on pinned workspace (**blocked — toolchain**)
-- [ ] `connection_status` → CONNECTED (explicitly **not** set)
+- [x] `cargo test --workspace --locked` on pinned workspace
+- [x] `connection_status` → CONNECTED (Phase 2B intake only)

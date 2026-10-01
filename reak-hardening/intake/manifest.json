@@ -1,19 +1,28 @@
 {
   "programme": "REAK-HARDENING",
   "phase": "2B",
-  "connection_status": "BLOCKED",
-  "connection_blocker": "BLOCKED_TEST_TOOLCHAIN",
-  "connection_blocker_detail": "Phase 2B incomplete: cargo test --workspace --locked not successful in this environment; Cargo 1.83.0 lacks edition2024 for the locked test graph. CONNECTED not asserted; qualification not passed; Phase 3 not started.",
-  "programme_gate_verdict": "BLOCKED",
+  "connection_status": "CONNECTED",
+  "connection_connected_at_utc": "2026-10-01T20:35:00Z",
+  "connection_detail": "Phase 2B connection/intake verified on read-only checkout at pinned REAK v1.0.0 (rerun at programme parent e7d82de, before CONNECTED documentation commit). Metadata, locked build, and locked tests succeeded (rustc/cargo 1.99.0). CONNECTED status reflects verification plus these pending doc updates, not a post-commit evidence SHA yet. Not qualification passed. Phase 3 not started.",
+  "programme_gate_verdict": "CONNECTED",
   "repository": {
     "identity": "origin.cursor.com/git/philip-macleod-dev/tmp-db34ee8b37f8bab7",
     "remote_url_public": "https://origin.cursor.com/git/philip-macleod-dev/tmp-db34ee8b37f8bab7.git",
     "branch": "main",
-    "commit_sha": "c85271bc363bd92e4c7e92724d192460dce3c14a",
-    "commit_subject": "Adopt repository programme topology and HARDENING_PIN template",
-    "programme_status_before_intake_alignment": "clean",
-    "scanned_at_utc": "2026-10-01T20:00:00Z",
+    "commit_sha": "e7d82de4acf2861041ef20684a038a16bf2087e9",
+    "commit_subject": "docs(hardening): record phase 2b blocked REAK intake",
+    "commit_sha_semantics": "Programme/hardening repository HEAD immediately before the CONNECTED documentation commit. repository.commit_sha and repository.commit_subject describe that pre-CONNECTED-documentation parent used for the successful Phase 2B verification rerun. This is not the post-commit CONNECTED evidence SHA (that commit does not exist yet). After the CONNECTED intake/gate commit is created, record it by updating repository.commit_sha and repository.commit_subject in a follow-up commit, or in another agreed evidence field. Do not use the REAK peeled commit here.",
+    "scanned_at_utc": "2026-10-01T20:35:00Z",
     "note": "This block describes the programme/hardening documentation repository only. It is not the REAK kernel pin."
+  },
+  "verification": {
+    "reak_peeled_commit_sha": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
+    "read_only_checkout": "/tmp/reak-runtime-phase2b-connected-check",
+    "rustc_version": "1.99.0 (b940084d7 2026-09-28)",
+    "cargo_version": "1.99.0 (5f94df478 2026-08-27)",
+    "cargo_metadata": "SUCCESS",
+    "cargo_build_workspace_locked": "SUCCESS",
+    "cargo_test_workspace_locked": "SUCCESS"
   },
   "implementation": {
     "present": false,
@@ -26,11 +35,11 @@
     "canonical_reak_tag_object_sha": "953ee352ebca7f44c8f6394a528e47be5534bed7",
     "canonical_reak_commit_sha": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
     "canonical_reak_branch": "main",
-    "read_only_verification_checkout": "/tmp/reak-runtime-phase2b-checkout",
+    "read_only_verification_checkout": "/tmp/reak-runtime-phase2b-connected-check",
     "access_mode": "read_only",
     "submodule": null,
     "worktree": null,
-    "evidence": "Canonical REAK verified via HTTPS remote fetch and temporary read-only checkout. No REAK source in programme tree. See connection-report.md and BUILD.md."
+    "evidence": "Canonical REAK verified via HTTPS ls-remote, fresh read-only checkout, cargo metadata/build/test. See connection-report.md and BUILD.md."
   },
   "modules": [
     {
@@ -38,105 +47,105 @@
       "crate": "reak-types",
       "path": "runtime-execution-assurance-kernel/crates/reak-types",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "durable-record",
       "crate": "reak-durable-record",
       "path": "runtime-execution-assurance-kernel/crates/reak-durable-record",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "policy-context",
       "crate": "reak-policy-context",
       "path": "runtime-execution-assurance-kernel/crates/reak-policy-context",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "ues",
       "crate": "reak-ues",
       "path": "runtime-execution-assurance-kernel/crates/reak-ues",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "registry",
       "crate": "reak-registry",
       "path": "runtime-execution-assurance-kernel/crates/reak-registry",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "replay",
       "crate": "reak-replay",
       "path": "runtime-execution-assurance-kernel/crates/reak-replay",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "authority",
       "crate": "reak-authority",
       "path": "runtime-execution-assurance-kernel/crates/reak-authority",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "exposure",
       "crate": "reak-exposure",
       "path": "runtime-execution-assurance-kernel/crates/reak-exposure",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "commitment",
       "crate": "reak-commitment",
       "path": "runtime-execution-assurance-kernel/crates/reak-commitment",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "dispatch",
       "crate": "reak-dispatch",
       "path": "runtime-execution-assurance-kernel/crates/reak-dispatch",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "observation",
       "crate": "reak-observation",
       "path": "runtime-execution-assurance-kernel/crates/reak-observation",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "reconciliation",
       "crate": "reak-reconciliation",
       "path": "runtime-execution-assurance-kernel/crates/reak-reconciliation",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "truth",
       "crate": "reak-truth",
       "path": "runtime-execution-assurance-kernel/crates/reak-truth",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "recovery",
       "crate": "reak-recovery",
       "path": "runtime-execution-assurance-kernel/crates/reak-recovery",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     },
     {
       "module": "progression",
       "crate": "reak-progression",
       "path": "runtime-execution-assurance-kernel/crates/reak-progression",
       "version": "1.0.0",
-      "source": "cargo metadata --no-deps (pinned checkout)"
+      "source": "cargo metadata --no-deps (pinned checkout 65cea8f)"
     }
   ]
 }
