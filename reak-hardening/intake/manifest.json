@@ -3,7 +3,10 @@
   "phase": "2B",
   "connection_status": "CONNECTED",
   "connection_connected_at_utc": "2026-10-01T20:35:00Z",
-  "connection_detail": "Phase 2B connection/intake verified on read-only checkout at pinned REAK v1.0.0 (rerun at programme parent e7d82de, before CONNECTED documentation commit). Metadata, locked build, and locked tests succeeded (rustc/cargo 1.99.0). CONNECTED status reflects verification plus these pending doc updates, not a post-commit evidence SHA yet. Not qualification passed. Phase 3 not started.",
+  "connection_detail": "Phase 2B connection/intake verified on read-only checkout at pinned REAK v1.0.0 (rerun at programme parent e7d82de). Metadata, locked build, and locked tests succeeded (rustc/cargo 1.99.0). CONNECTED evidence recorded in connected_evidence_commit_sha. Not qualification passed. Phase 3 not started.",
+  "connected_evidence_commit_sha": "8be8fc392888040b7666b10be3eed969598989eb",
+  "connected_evidence_commit_subject": "docs(hardening): connect phase 2b REAK intake",
+  "connected_evidence_commit_semantics": "Programme/hardening repository commit that records Phase 2B CONNECTED intake and gate documentation. This is not the REAK kernel pin and not the pre-CONNECTED verification parent (see repository.commit_sha).",
   "programme_gate_verdict": "CONNECTED",
   "repository": {
     "identity": "origin.cursor.com/git/philip-macleod-dev/tmp-db34ee8b37f8bab7",
@@ -11,7 +14,7 @@
     "branch": "main",
     "commit_sha": "e7d82de4acf2861041ef20684a038a16bf2087e9",
     "commit_subject": "docs(hardening): record phase 2b blocked REAK intake",
-    "commit_sha_semantics": "Programme/hardening repository HEAD immediately before the CONNECTED documentation commit. repository.commit_sha and repository.commit_subject describe that pre-CONNECTED-documentation parent used for the successful Phase 2B verification rerun. This is not the post-commit CONNECTED evidence SHA (that commit does not exist yet). After the CONNECTED intake/gate commit is created, record it by updating repository.commit_sha and repository.commit_subject in a follow-up commit, or in another agreed evidence field. Do not use the REAK peeled commit here.",
+    "commit_sha_semantics": "Pre-CONNECTED verification parent: programme/hardening repository HEAD used for the successful Phase 2B verification rerun immediately before the CONNECTED documentation commit. repository.commit_sha and repository.commit_subject describe that parent only. The CONNECTED intake/gate evidence commit is connected_evidence_commit_sha (not repository.commit_sha). Do not use the REAK peeled commit here.",
     "scanned_at_utc": "2026-10-01T20:35:00Z",
     "note": "This block describes the programme/hardening documentation repository only. It is not the REAK kernel pin."
   },
