@@ -1,0 +1,50 @@
+{
+  "terminal": "QK2-PRE-PROMOTION-IDENTITY-REPAIR",
+  "generated_at_utc": "2026-10-03T22:20:00Z",
+  "mode": "CORRECTION_ONLY",
+  "tests_executed": 0,
+  "catalogue_rows_modified": false,
+  "reak_modified": false,
+  "qk_modified": false,
+  "programme_head_before": "fef20be2210c81a358e0563180f9315040ec3fa1",
+  "current_authoritative_matrix_sha256": "e3287c54630f92426e739365f3ad646c9ddcde6fa04e16b64c451ed6f180fc52",
+  "historical_t01_evidence_snapshot_sha256": "e532f7b5d0961dcb81b21391baabc326a9e43d571ffc01cd9825d803f3942f54",
+  "tier3_original_matrix_sha256": "828af203aa1def6d3bf10d4feefccb16e36320b0fa07e115d1f0b573485cd48d",
+  "cause": {
+    "classification": "STALE_CURRENT_STATE_REFERENCE",
+    "summary": "After QK-TRANCHE-01 promotion, programme commits fef20be corrected embedded programme_promotion_commit metadata in the live current-state matrix without updating promotion-record.json and README digest fields that still declared the frozen T01 evidence snapshot (e532) as the authoritative current-state SHA."
+  },
+  "semantic_impact": {
+    "catalogue_results_differ": false,
+    "catalogue_blockers_differ": false,
+    "scenario_rows_byte_identical_between_e532_and_e328": true,
+    "rollup_unchanged": "6_PASS / 10_NOT_RUN / 0_FAIL / 16_TOTAL",
+    "summary": "Documentation and identity-ledger correction only; no promotion adjudication or catalogue semantics changed."
+  },
+  "stale_references_repaired": [
+    {
+      "path": "reak-hardening/phase3/evidence/qk-tranche-01-canonical-promotion-2026-10-03/promotion-record.json",
+      "field": "current_state_matrix.sha256",
+      "before": "e532f7b5d0961dcb81b21391baabc326a9e43d571ffc01cd9825d803f3942f54",
+      "after": "e3287c54630f92426e739365f3ad646c9ddcde6fa04e16b64c451ed6f180fc52"
+    },
+    {
+      "path": "reak-hardening/phase3/evidence/qk-tranche-01-canonical-promotion-2026-10-03/README.md",
+      "field": "lineage current-state digest",
+      "before": "e532f7b5d0961dcb81b21391baabc326a9e43d571ffc01cd9825d803f3942f54",
+      "after": "e3287c54630f92426e739365f3ad646c9ddcde6fa04e16b64c451ed6f180fc52"
+    }
+  ],
+  "preserved_frozen_artefacts": [
+    "evidence/qk-tranche-01-canonical-promotion-2026-10-03/current-state-catalogue-scenario-matrix.json",
+    "evidence/qk-tranche-01-canonical-promotion-2026-10-03/MANIFEST.sha256",
+    "evidence/qk-tranche-01-canonical-promotion-2026-10-03/promotion-record.json"
+  ],
+  "qk_tranche_02_preflight": {
+    "input_matrix_sha256": "e3287c54630f92426e739365f3ad646c9ddcde6fa04e16b64c451ed6f180fc52",
+    "qk_tranche_02_commit": "448f411c2392693214fcce1685a9df2c3f003235",
+    "qk_tranche_02_commit_unchanged": true
+  },
+  "matrix_identity_repair": "COMPLETED",
+  "qk_tranche_02_promotion_readiness": "READY"
+}

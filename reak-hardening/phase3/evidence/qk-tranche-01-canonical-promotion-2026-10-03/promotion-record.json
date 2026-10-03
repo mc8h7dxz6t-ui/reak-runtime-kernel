@@ -48,9 +48,16 @@
     "fail": 0,
     "total": 16
   },
+  "current_authoritative_matrix_sha256": "e3287c54630f92426e739365f3ad646c9ddcde6fa04e16b64c451ed6f180fc52",
+  "historical_t01_evidence_snapshot_sha256": "e532f7b5d0961dcb81b21391baabc326a9e43d571ffc01cd9825d803f3942f54",
+  "historical_t01_evidence_snapshot": {
+    "path": "evidence/qk-tranche-01-canonical-promotion-2026-10-03/current-state-catalogue-scenario-matrix.json",
+    "sha256": "e532f7b5d0961dcb81b21391baabc326a9e43d571ffc01cd9825d803f3942f54",
+    "role": "FROZEN_T01_PROMOTION_EVIDENCE_SNAPSHOT"
+  },
   "current_state_matrix": {
     "path": "reak-hardening/phase3/evidence/current-state/catalogue-scenario-matrix.json",
-    "sha256": "e532f7b5d0961dcb81b21391baabc326a9e43d571ffc01cd9825d803f3942f54"
+    "sha256": "e3287c54630f92426e739365f3ad646c9ddcde6fa04e16b64c451ed6f180fc52"
   },
   "authorization_flags": {
     "QK_TRANCHE_02_AUTHORIZED": false,

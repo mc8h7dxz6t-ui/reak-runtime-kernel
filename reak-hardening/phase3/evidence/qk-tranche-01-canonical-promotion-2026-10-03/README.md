@@ -13,7 +13,8 @@
 ## Lineage
 
 - Tier-3 original matrix preserved at `plan-conformant-2026-10-03/catalogue-scenario-matrix.json` (SHA-256 `828af203aa1def6d3bf10d4feefccb16e36320b0fa07e115d1f0b573485cd48d`).
-- Current-state matrix: `current-state/catalogue-scenario-matrix.json` (SHA-256 `e532f7b5d0961dcb81b21391baabc326a9e43d571ffc01cd9825d803f3942f54`).
+- **Authoritative** current-state matrix: `current-state/catalogue-scenario-matrix.json` (SHA-256 `e3287c54630f92426e739365f3ad646c9ddcde6fa04e16b64c451ed6f180fc52`).
+- **Historical T01 promotion evidence snapshot** (frozen bundle copy): `evidence/qk-tranche-01-canonical-promotion-2026-10-03/current-state-catalogue-scenario-matrix.json` (SHA-256 `e532f7b5d0961dcb81b21391baabc326a9e43d571ffc01cd9825d803f3942f54`).
 - QK execution evidence: `evidence/qk-tranche-01-2026-10-03/` (unchanged).
 
 ## Flags
