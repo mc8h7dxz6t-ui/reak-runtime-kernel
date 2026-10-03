@@ -111,7 +111,7 @@
   },
   "current_state_matrix": {
     "path": "reak-hardening/phase3/evidence/current-state/catalogue-scenario-matrix.json",
-    "sha256": "1d61d92d8b756ef152085df286c6e57fdd7988c639defa416a48a125a3170f9c"
+    "sha256": "cf360a789a02c5fb29d6d8322c3b4f3776c0a247e9d81a42ed5d35f1b31b2728"
   },
   "authorization_flags": {
     "QK_TRANCHE_04_RESULTS_PROMOTED": true,
