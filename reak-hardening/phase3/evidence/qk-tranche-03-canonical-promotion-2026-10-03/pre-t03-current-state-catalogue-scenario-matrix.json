@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-10-03T22:00:42Z",
-  "programme_execution_revision": "7e5b9bca0a2edfe468d0cb731e2fb50f942a9b91",
+  "generated_at_utc": "2026-10-03T21:22:37Z",
+  "programme_execution_revision": "1ab53419a75b0e92797a38616f2836f7aec5f3bc",
   "scenarios": [
     {
       "catalogue_id": "P-01",
@@ -160,17 +160,12 @@
     {
       "catalogue_id": "C-04",
       "title": "Read during write of checkpoint",
-      "execution_state": "EXECUTED",
-      "result": "PASS",
-      "blocker": null,
-      "evidence_log": "evidence/qk-tranche-03-2026-10-03/C-04-execution.log",
-      "programme_execution_revision": "7e5b9bca0a2edfe468d0cb731e2fb50f942a9b91",
-      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
-      "promotion_lineage": {
-        "TIER3_ORIGINAL": "NOT RUN",
-        "QK_RESULT": "PASS",
-        "CANONICAL_CURRENT": "PASS"
-      }
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No torn-read harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
     },
     {
       "catalogue_id": "K-01",
@@ -210,19 +205,22 @@
     "preservation": "IMMUTABLE_TIER3_ORIGINAL"
   },
   "promotion": {
-    "terminal": "QK-TRANCHE-03-CANONICAL-PROMOTION",
-    "tranche_execution": "QK-TRANCHE-03",
+    "terminal": "QK-TRANCHE-02-CANONICAL-PROMOTION",
+    "tranche_execution": "QK-TRANCHE-02",
     "promoted_catalogue_ids": [
-      "C-04"
+      "P-05",
+      "F-01",
+      "F-02",
+      "F-03",
+      "F-04"
     ],
-    "qk_tranche_commit": "47ed9536b3bf501823f0c9ec42446460d3f3f119",
-    "qk_tranche_02_commit": "448f411c2392693214fcce1685a9df2c3f003235",
-    "qk_tranche_01_commit": "c0f02680007f7ab6e9df86e7a59d78d55fbc4ea4",
+    "qk_tranche_commit": "448f411c2392693214fcce1685a9df2c3f003235",
     "qk_bootstrap_commit": "deef3951661db62ca827f1b0d273cc9d05d91387",
+    "qk_tranche_01_commit": "c0f02680007f7ab6e9df86e7a59d78d55fbc4ea4",
     "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
-    "evidence_root": "evidence/qk-tranche-03-2026-10-03",
-    "pre_t03_current_state_matrix_sha256": "5fe0bcdca2663cd74aec9941b96565bef39ac06bea35e8c5f97ac96bcaf7d659",
-    "programme_promotion_commit": "PENDING_RECORDING"
+    "evidence_root": "evidence/qk-tranche-02-2026-10-03",
+    "pre_t02_current_state_matrix_sha256": "e3287c54630f92426e739365f3ad646c9ddcde6fa04e16b64c451ed6f180fc52",
+    "programme_promotion_commit": "5506dd5f770c178662df8d980346c2e80d11c46a"
   },
-  "programme_promotion_commit": "PENDING_RECORDING"
+  "programme_promotion_commit": "5506dd5f770c178662df8d980346c2e80d11c46a"
 }

@@ -1,0 +1,69 @@
+{
+  "terminal": "QK-TRANCHE-03-CANONICAL-PROMOTION",
+  "generated_at_utc": "2026-10-03T22:00:42Z",
+  "mode": "READ_ONLY_ADJUDICATION",
+  "tests_executed_this_tranche": 0,
+  "hostile_scenarios_executed_this_tranche": 0,
+  "programme_head_before": "7e5b9bca0a2edfe468d0cb731e2fb50f942a9b91",
+  "tier3_original_matrix_sha256": "828af203aa1def6d3bf10d4feefccb16e36320b0fa07e115d1f0b573485cd48d",
+  "tier3_original_matrix_preserved": true,
+  "qualification_kernel": {
+    "tranche_03_commit": "47ed9536b3bf501823f0c9ec42446460d3f3f119",
+    "tranche_02_commit": "448f411c2392693214fcce1685a9df2c3f003235",
+    "tranche_01_commit": "c0f02680007f7ab6e9df86e7a59d78d55fbc4ea4",
+    "bootstrap_commit": "deef3951661db62ca827f1b0d273cc9d05d91387"
+  },
+  "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
+  "qk_tranche_evidence_root": "/Users/philipmacleod/Documents/Codex/2026-10-03/files-pasted-by-the-user-reak/outputs/tier3-plan-conformant-execution/evidence/qk-tranche-03-2026-10-03",
+  "evidence_manifest_note": "MANIFEST_FILES_DRIFTED=0; all execution artefacts verify OK",
+  "adjudication": {
+    "C-04": {
+      "verdict": "PROMOTE_PASS",
+      "qk_execution_result": "PASS",
+      "promotion_eligible": true,
+      "evidence_log": "C-04-execution.log",
+      "hostile_adjudication": "PASS",
+      "lineage": "TIER3_ORIGINAL=NOT_RUN,QK_RESULT=PASS,CANONICAL_CURRENT=PASS",
+      "checks": [
+        "manifest_integrity_execution_subset",
+        "pin_gate_pass",
+        "concurrency_stress_runner_pass",
+        "row_stub_consistent",
+        "reak_pin_matches",
+        "self_qualify_oracle_pass"
+      ]
+    }
+  },
+  "catalogue_rollup_after_promotion": {
+    "pass": 12,
+    "not_run": 4,
+    "fail": 0,
+    "total": 16
+  },
+  "pre_t03_current_state_matrix": {
+    "path": "reak-hardening/phase3/evidence/qk-tranche-03-canonical-promotion-2026-10-03/pre-t03-current-state-catalogue-scenario-matrix.json",
+    "sha256": "5fe0bcdca2663cd74aec9941b96565bef39ac06bea35e8c5f97ac96bcaf7d659",
+    "role": "FROZEN_PRE_T03_CURRENT_STATE"
+  },
+  "pre_t02_current_state_matrix": {
+    "path": "reak-hardening/phase3/evidence/qk-tranche-02-canonical-promotion-2026-10-03/pre-t02-current-state-catalogue-scenario-matrix.json",
+    "sha256": "e3287c54630f92426e739365f3ad646c9ddcde6fa04e16b64c451ed6f180fc52",
+    "role": "FROZEN_PRE_T02_CURRENT_STATE"
+  },
+  "historical_t01_evidence_snapshot": {
+    "path": "evidence/qk-tranche-01-canonical-promotion-2026-10-03/current-state-catalogue-scenario-matrix.json",
+    "sha256": "e532f7b5d0961dcb81b21391baabc326a9e43d571ffc01cd9825d803f3942f54",
+    "role": "FROZEN_T01_PROMOTION_EVIDENCE_SNAPSHOT",
+    "preservation": "UNMODIFIED"
+  },
+  "current_state_matrix": {
+    "path": "reak-hardening/phase3/evidence/current-state/catalogue-scenario-matrix.json",
+    "sha256": "9dd8a807f80d048525f53554dbbefef47d302c020074a6fb42da7c8eecdfaef0"
+  },
+  "authorization_flags": {
+    "QK_TRANCHE_04_AUTHORIZED": false,
+    "PHASE3_COMPLETE": false,
+    "PHYSICAL_MAC_LANE_USED": false
+  },
+  "programme_promotion_commit": "PENDING_RECORDING"
+}
