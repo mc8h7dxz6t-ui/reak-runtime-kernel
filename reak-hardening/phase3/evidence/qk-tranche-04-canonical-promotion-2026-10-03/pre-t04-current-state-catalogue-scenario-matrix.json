@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-10-03T22:22:58Z",
-  "programme_execution_revision": "15bfada46764ee68be0ae9b1cbc0634c2b8581ad",
+  "generated_at_utc": "2026-10-03T22:00:42Z",
+  "programme_execution_revision": "7e5b9bca0a2edfe468d0cb731e2fb50f942a9b91",
   "scenarios": [
     {
       "catalogue_id": "P-01",
@@ -140,17 +140,12 @@
     {
       "catalogue_id": "C-02",
       "title": "Release during crash after record commit",
-      "execution_state": "EXECUTED",
-      "result": "PASS",
-      "blocker": null,
-      "evidence_log": "evidence/qk-tranche-04-2026-10-03/C-02-execution.log",
-      "programme_execution_revision": "15bfada46764ee68be0ae9b1cbc0634c2b8581ad",
-      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
-      "promotion_lineage": {
-        "TIER3_ORIGINAL": "NOT RUN",
-        "QK_RESULT": "PASS",
-        "CANONICAL_CURRENT": "PASS"
-      }
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No crash harness (K-series)",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
     },
     {
       "catalogue_id": "C-03",
@@ -180,47 +175,32 @@
     {
       "catalogue_id": "K-01",
       "title": "Kill after commit before sign",
-      "execution_state": "EXECUTED",
-      "result": "PASS",
-      "blocker": null,
-      "evidence_log": "evidence/qk-tranche-04-2026-10-03/K-01-execution.log",
-      "programme_execution_revision": "15bfada46764ee68be0ae9b1cbc0634c2b8581ad",
-      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
-      "promotion_lineage": {
-        "TIER3_ORIGINAL": "NOT RUN",
-        "QK_RESULT": "PASS",
-        "CANONICAL_CURRENT": "PASS"
-      }
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No crash simulation harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
     },
     {
       "catalogue_id": "K-02",
       "title": "Kill after sign before effector",
-      "execution_state": "EXECUTED",
-      "result": "PASS",
-      "blocker": null,
-      "evidence_log": "evidence/qk-tranche-04-2026-10-03/K-02-execution.log",
-      "programme_execution_revision": "15bfada46764ee68be0ae9b1cbc0634c2b8581ad",
-      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
-      "promotion_lineage": {
-        "TIER3_ORIGINAL": "NOT RUN",
-        "QK_RESULT": "PASS",
-        "CANONICAL_CURRENT": "PASS"
-      }
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No crash simulation harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
     },
     {
       "catalogue_id": "K-03",
       "title": "Mid-serialize kill",
-      "execution_state": "EXECUTED",
-      "result": "PASS",
-      "blocker": null,
-      "evidence_log": "evidence/qk-tranche-04-2026-10-03/K-03-execution.log",
-      "programme_execution_revision": "15bfada46764ee68be0ae9b1cbc0634c2b8581ad",
-      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
-      "promotion_lineage": {
-        "TIER3_ORIGINAL": "NOT RUN",
-        "QK_RESULT": "PASS",
-        "CANONICAL_CURRENT": "PASS"
-      }
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No crash simulation harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
     }
   ],
   "schema": "TIER3_CATALOGUE_SCENARIO_MATRIX_CURRENT_STATE_v1",
@@ -230,23 +210,19 @@
     "preservation": "IMMUTABLE_TIER3_ORIGINAL"
   },
   "promotion": {
-    "terminal": "QK-TRANCHE-04-CANONICAL-PROMOTION",
-    "tranche_execution": "QK-TRANCHE-04",
+    "terminal": "QK-TRANCHE-03-CANONICAL-PROMOTION",
+    "tranche_execution": "QK-TRANCHE-03",
     "promoted_catalogue_ids": [
-      "C-02",
-      "K-01",
-      "K-02",
-      "K-03"
+      "C-04"
     ],
-    "qk_tranche_commit": "f174bd8f1165b42a1dabfa6490ce2ed4baede986",
-    "qk_tranche_03_commit": "47ed9536b3bf501823f0c9ec42446460d3f3f119",
+    "qk_tranche_commit": "47ed9536b3bf501823f0c9ec42446460d3f3f119",
     "qk_tranche_02_commit": "448f411c2392693214fcce1685a9df2c3f003235",
     "qk_tranche_01_commit": "c0f02680007f7ab6e9df86e7a59d78d55fbc4ea4",
     "qk_bootstrap_commit": "deef3951661db62ca827f1b0d273cc9d05d91387",
     "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
-    "evidence_root": "evidence/qk-tranche-04-2026-10-03",
-    "pre_t04_current_state_matrix_sha256": "8c978304aed84c776a3e3f77b4f891d44b9f6854ab0a4d6536c25447a2b1a227",
-    "programme_promotion_commit": "PENDING_RECORDING"
+    "evidence_root": "evidence/qk-tranche-03-2026-10-03",
+    "pre_t03_current_state_matrix_sha256": "5fe0bcdca2663cd74aec9941b96565bef39ac06bea35e8c5f97ac96bcaf7d659",
+    "programme_promotion_commit": "dd23d7c5c6a9f516f17fdeefab51b12505e69f7b"
   },
-  "programme_promotion_commit": "PENDING_RECORDING"
+  "programme_promotion_commit": "dd23d7c5c6a9f516f17fdeefab51b12505e69f7b"
 }

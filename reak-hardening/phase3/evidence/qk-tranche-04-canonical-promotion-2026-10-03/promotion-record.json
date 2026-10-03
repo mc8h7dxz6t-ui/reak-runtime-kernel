@@ -1,0 +1,123 @@
+{
+  "terminal": "QK-TRANCHE-04-CANONICAL-PROMOTION",
+  "generated_at_utc": "2026-10-03T22:22:58Z",
+  "mode": "READ_ONLY_ADJUDICATION",
+  "tests_executed_this_tranche": 0,
+  "hostile_scenarios_executed_this_tranche": 0,
+  "programme_head_before": "15bfada46764ee68be0ae9b1cbc0634c2b8581ad",
+  "tier3_original_matrix_sha256": "828af203aa1def6d3bf10d4feefccb16e36320b0fa07e115d1f0b573485cd48d",
+  "tier3_original_matrix_preserved": true,
+  "qualification_kernel": {
+    "qk_t04_revision": "f174bd8f1165b42a1dabfa6490ce2ed4baede986",
+    "tranche_03_commit": "47ed9536b3bf501823f0c9ec42446460d3f3f119",
+    "tranche_02_commit": "448f411c2392693214fcce1685a9df2c3f003235",
+    "tranche_01_commit": "c0f02680007f7ab6e9df86e7a59d78d55fbc4ea4",
+    "bootstrap_commit": "deef3951661db62ca827f1b0d273cc9d05d91387"
+  },
+  "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
+  "qk_tranche_evidence_root": "/Users/philipmacleod/Documents/Codex/2026-10-03/files-pasted-by-the-user-reak/outputs/tier3-plan-conformant-execution/evidence/qk-tranche-04-2026-10-03",
+  "evidence_manifest_note": "MANIFEST_FILES_DRIFTED=0; all execution artefacts verify OK",
+  "adjudication": {
+    "C-02": {
+      "verdict": "PROMOTE_PASS",
+      "qk_execution_result": "PASS",
+      "promotion_eligible": true,
+      "evidence_log": "C-02-execution.log",
+      "hostile_adjudication": "PASS",
+      "lineage": "TIER3_ORIGINAL=NOT_RUN,QK_RESULT=PASS,CANONICAL_CURRENT=PASS",
+      "checks": [
+        "manifest_integrity_execution_subset",
+        "pin_gate_pass",
+        "crash_injector_harness_pass",
+        "row_stub_consistent",
+        "reak_pin_matches",
+        "self_qualify_oracle_pass"
+      ],
+      "row_stub_sha256": "f8826803a4feffd677f3b3a41ec1f8928fdb87d26b08f7101599435c7f1aea5a"
+    },
+    "K-01": {
+      "verdict": "PROMOTE_PASS",
+      "qk_execution_result": "PASS",
+      "promotion_eligible": true,
+      "evidence_log": "K-01-execution.log",
+      "hostile_adjudication": "PASS",
+      "lineage": "TIER3_ORIGINAL=NOT_RUN,QK_RESULT=PASS,CANONICAL_CURRENT=PASS",
+      "checks": [
+        "manifest_integrity_execution_subset",
+        "pin_gate_pass",
+        "crash_injector_harness_pass",
+        "row_stub_consistent",
+        "reak_pin_matches",
+        "self_qualify_oracle_pass"
+      ],
+      "row_stub_sha256": "abc2ecb210871dddeb851763b7ec062b87cb2e15b28e32a35d46fdb7cf793e7c"
+    },
+    "K-02": {
+      "verdict": "PROMOTE_PASS",
+      "qk_execution_result": "PASS",
+      "promotion_eligible": true,
+      "evidence_log": "K-02-execution.log",
+      "hostile_adjudication": "PASS",
+      "lineage": "TIER3_ORIGINAL=NOT_RUN,QK_RESULT=PASS,CANONICAL_CURRENT=PASS",
+      "checks": [
+        "manifest_integrity_execution_subset",
+        "pin_gate_pass",
+        "crash_injector_harness_pass",
+        "row_stub_consistent",
+        "reak_pin_matches",
+        "self_qualify_oracle_pass"
+      ],
+      "row_stub_sha256": "2b5f9fb917c486f6d5d2a83b94202e6c53dd7bc058a0cd5e2b2656bef2242983"
+    },
+    "K-03": {
+      "verdict": "PROMOTE_PASS",
+      "qk_execution_result": "PASS",
+      "promotion_eligible": true,
+      "evidence_log": "K-03-execution.log",
+      "hostile_adjudication": "PASS",
+      "lineage": "TIER3_ORIGINAL=NOT_RUN,QK_RESULT=PASS,CANONICAL_CURRENT=PASS",
+      "checks": [
+        "manifest_integrity_execution_subset",
+        "pin_gate_pass",
+        "crash_injector_harness_pass",
+        "row_stub_consistent",
+        "reak_pin_matches",
+        "self_qualify_oracle_pass"
+      ],
+      "row_stub_sha256": "2d2d191a1c1e4c6791a3f03e4871315fdcc623dfa93fcbd08a46ce4262f5821b"
+    }
+  },
+  "catalogue_rollup_after_promotion": {
+    "pass": 16,
+    "not_run": 0,
+    "fail": 0,
+    "total": 16
+  },
+  "pre_t04_current_state_matrix": {
+    "path": "reak-hardening/phase3/evidence/qk-tranche-04-canonical-promotion-2026-10-03/pre-t04-current-state-catalogue-scenario-matrix.json",
+    "sha256": "8c978304aed84c776a3e3f77b4f891d44b9f6854ab0a4d6536c25447a2b1a227",
+    "role": "FROZEN_PRE_T04_CURRENT_STATE"
+  },
+  "pre_t03_current_state_matrix": {
+    "path": "reak-hardening/phase3/evidence/qk-tranche-03-canonical-promotion-2026-10-03/pre-t03-current-state-catalogue-scenario-matrix.json",
+    "sha256": "5fe0bcdca2663cd74aec9941b96565bef39ac06bea35e8c5f97ac96bcaf7d659",
+    "role": "FROZEN_PRE_T03_CURRENT_STATE"
+  },
+  "historical_t01_evidence_snapshot": {
+    "path": "evidence/qk-tranche-01-canonical-promotion-2026-10-03/current-state-catalogue-scenario-matrix.json",
+    "sha256": "e532f7b5d0961dcb81b21391baabc326a9e43d571ffc01cd9825d803f3942f54",
+    "role": "FROZEN_T01_PROMOTION_EVIDENCE_SNAPSHOT",
+    "preservation": "UNMODIFIED"
+  },
+  "current_state_matrix": {
+    "path": "reak-hardening/phase3/evidence/current-state/catalogue-scenario-matrix.json",
+    "sha256": "1d61d92d8b756ef152085df286c6e57fdd7988c639defa416a48a125a3170f9c"
+  },
+  "authorization_flags": {
+    "QK_TRANCHE_04_RESULTS_PROMOTED": true,
+    "PHASE3_COMPLETE": false,
+    "PHASE3_CLOSURE_ADJUDICATION_STARTED": false,
+    "PHYSICAL_MAC_LANE_USED": false
+  },
+  "programme_promotion_commit": "PENDING_RECORDING"
+}
