@@ -222,7 +222,7 @@
     "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
     "evidence_root": "evidence/qk-tranche-03-2026-10-03",
     "pre_t03_current_state_matrix_sha256": "5fe0bcdca2663cd74aec9941b96565bef39ac06bea35e8c5f97ac96bcaf7d659",
-    "programme_promotion_commit": "PENDING_RECORDING"
+    "programme_promotion_commit": "dd23d7c5c6a9f516f17fdeefab51b12505e69f7b"
   },
-  "programme_promotion_commit": "PENDING_RECORDING"
+  "programme_promotion_commit": "dd23d7c5c6a9f516f17fdeefab51b12505e69f7b"
 }
