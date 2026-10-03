@@ -1,0 +1,166 @@
+{
+  "generated_at_utc": "2026-10-03T17:20:49.803275Z",
+  "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+  "scenarios": [
+    {
+      "catalogue_id": "P-01",
+      "title": "Property: same sealed inputs",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No dedicated catalogue harness; proptest not mapped to P-01 oracle",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "P-02",
+      "title": "No release without durable authorization",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No isolated catalogue runner for P-02",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "P-03",
+      "title": "Append-only replay never shortens history",
+      "execution_state": "EXECUTED",
+      "result": "PASS",
+      "blocker": null,
+      "evidence_log": "evidence/tier3-hostile-integration.log",
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "P-04",
+      "title": "Unknown outcome does not increase release count",
+      "execution_state": "EXECUTED",
+      "result": "PASS",
+      "blocker": null,
+      "evidence_log": "evidence/tier3-hostile-integration.log",
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "P-05",
+      "title": "Token/binding rejects bit flip",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No wire/bit-flip fuzz harness (F-03 class)",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "F-01",
+      "title": "Deserialization records",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No structured fuzz job",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "F-02",
+      "title": "Authorization blob mutate",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No libFuzzer job",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "F-03",
+      "title": "Wire request after sign",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No AFL/libFuzzer canonical encoding job",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "F-04",
+      "title": "Config file grammar-aware",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No config fuzz harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "C-01",
+      "title": "Two threads release same authorization",
+      "execution_state": "EXECUTED",
+      "result": "PASS",
+      "blocker": null,
+      "evidence_log": "evidence/tier3-hostile-integration.log",
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "C-02",
+      "title": "Release during crash after record commit",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No crash harness (K-series)",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "C-03",
+      "title": "Parallel append to log",
+      "execution_state": "EXECUTED",
+      "result": "PASS",
+      "blocker": null,
+      "evidence_log": "evidence/tier3-hostile-integration.log",
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "C-04",
+      "title": "Read during write of checkpoint",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No torn-read harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "K-01",
+      "title": "Kill after commit before sign",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No crash simulation harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "K-02",
+      "title": "Kill after sign before effector",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No crash simulation harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "K-03",
+      "title": "Mid-serialize kill",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No crash simulation harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    }
+  ]
+}

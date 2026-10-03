@@ -55,3 +55,4 @@ Do not treat **OPENED** as **COMPLETE**. Phase 3 completion criteria are defined
 | Execution branch | tier3-plan-conformant-execution |
 | Adversarial row | **STARTED** (kickoff commit) |
 | Programme completion | **Not claimed** |
+| Plan-conformant catalogue commit |  |
