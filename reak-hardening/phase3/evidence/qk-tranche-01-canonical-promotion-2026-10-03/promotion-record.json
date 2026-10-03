@@ -1,0 +1,61 @@
+{
+  "terminal": "QK-TRANCHE-01-CANONICAL-PROMOTION",
+  "generated_at_utc": "2026-10-03T19:29:21Z",
+  "mode": "READ_ONLY_ADJUDICATION",
+  "tests_executed_this_tranche": 0,
+  "programme_head_before": "a88be9f46d9b8a79ed8b9ca63a274348db13010e",
+  "tier3_original_matrix_sha256": "828af203aa1def6d3bf10d4feefccb16e36320b0fa07e115d1f0b573485cd48d",
+  "tier3_original_matrix_preserved": true,
+  "qualification_kernel": {
+    "tranche_01_commit": "c0f02680007f7ab6e9df86e7a59d78d55fbc4ea4",
+    "bootstrap_commit": "deef3951661db62ca827f1b0d273cc9d05d91387"
+  },
+  "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
+  "qk_tranche_evidence_root": "/Users/philipmacleod/Documents/Codex/2026-10-03/files-pasted-by-the-user-reak/outputs/tier3-plan-conformant-execution/evidence/qk-tranche-01-2026-10-03",
+  "adjudication": {
+    "P-01": {
+      "verdict": "PROMOTE_PASS",
+      "qk_execution_result": "PASS",
+      "promotion_eligible": true,
+      "evidence_log": "P-01-execution.log",
+      "hostile_adjudication": "PASS",
+      "checks": [
+        "manifest_integrity",
+        "pin_gate_pass",
+        "catalogue_property_runner_pass",
+        "row_stub_consistent",
+        "reak_pin_matches"
+      ]
+    },
+    "P-02": {
+      "verdict": "PROMOTE_PASS",
+      "qk_execution_result": "PASS",
+      "promotion_eligible": true,
+      "evidence_log": "P-02-execution.log",
+      "hostile_adjudication": "PASS",
+      "checks": [
+        "manifest_integrity",
+        "pin_gate_pass",
+        "catalogue_property_runner_pass",
+        "row_stub_consistent",
+        "reak_pin_matches"
+      ]
+    }
+  },
+  "catalogue_rollup_after_promotion": {
+    "pass": 6,
+    "not_run": 10,
+    "fail": 0,
+    "total": 16
+  },
+  "current_state_matrix": {
+    "path": "reak-hardening/phase3/evidence/current-state/catalogue-scenario-matrix.json",
+    "sha256": "e532f7b5d0961dcb81b21391baabc326a9e43d571ffc01cd9825d803f3942f54"
+  },
+  "authorization_flags": {
+    "QK_TRANCHE_02_AUTHORIZED": false,
+    "PHASE3_COMPLETE": false,
+    "PHYSICAL_MAC_LANE_USED": false
+  },
+  "programme_promotion_commit": "2b952c9a5c51ac7493367a7ca841b56a3bebc328"
+}

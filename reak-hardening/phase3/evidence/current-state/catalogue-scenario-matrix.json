@@ -1,0 +1,196 @@
+{
+  "generated_at_utc": "2026-10-03T19:29:21Z",
+  "programme_execution_revision": "a88be9f46d9b8a79ed8b9ca63a274348db13010e",
+  "scenarios": [
+    {
+      "catalogue_id": "P-01",
+      "title": "Property: same sealed inputs",
+      "execution_state": "EXECUTED",
+      "result": "PASS",
+      "blocker": null,
+      "evidence_log": "evidence/qk-tranche-01-2026-10-03/P-01-execution.log",
+      "programme_execution_revision": "a88be9f46d9b8a79ed8b9ca63a274348db13010e",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
+      "promotion_lineage": {
+        "TIER3_ORIGINAL": "NOT RUN",
+        "QK_RESULT": "PASS",
+        "CANONICAL_CURRENT": "PASS"
+      }
+    },
+    {
+      "catalogue_id": "P-02",
+      "title": "No release without durable authorization",
+      "execution_state": "EXECUTED",
+      "result": "PASS",
+      "blocker": null,
+      "evidence_log": "evidence/qk-tranche-01-2026-10-03/P-02-execution.log",
+      "programme_execution_revision": "a88be9f46d9b8a79ed8b9ca63a274348db13010e",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
+      "promotion_lineage": {
+        "TIER3_ORIGINAL": "NOT RUN",
+        "QK_RESULT": "PASS",
+        "CANONICAL_CURRENT": "PASS"
+      }
+    },
+    {
+      "catalogue_id": "P-03",
+      "title": "Append-only replay never shortens history",
+      "execution_state": "EXECUTED",
+      "result": "PASS",
+      "blocker": null,
+      "evidence_log": "evidence/tier3-hostile-integration.log",
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "P-04",
+      "title": "Unknown outcome does not increase release count",
+      "execution_state": "EXECUTED",
+      "result": "PASS",
+      "blocker": null,
+      "evidence_log": "evidence/tier3-hostile-integration.log",
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "P-05",
+      "title": "Token/binding rejects bit flip",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No wire/bit-flip fuzz harness (F-03 class)",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "F-01",
+      "title": "Deserialization records",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No structured fuzz job",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "F-02",
+      "title": "Authorization blob mutate",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No libFuzzer job",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "F-03",
+      "title": "Wire request after sign",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No AFL/libFuzzer canonical encoding job",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "F-04",
+      "title": "Config file grammar-aware",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No config fuzz harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "C-01",
+      "title": "Two threads release same authorization",
+      "execution_state": "EXECUTED",
+      "result": "PASS",
+      "blocker": null,
+      "evidence_log": "evidence/tier3-hostile-integration.log",
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "C-02",
+      "title": "Release during crash after record commit",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No crash harness (K-series)",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "C-03",
+      "title": "Parallel append to log",
+      "execution_state": "EXECUTED",
+      "result": "PASS",
+      "blocker": null,
+      "evidence_log": "evidence/tier3-hostile-integration.log",
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "C-04",
+      "title": "Read during write of checkpoint",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No torn-read harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "K-01",
+      "title": "Kill after commit before sign",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No crash simulation harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "K-02",
+      "title": "Kill after sign before effector",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No crash simulation harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    },
+    {
+      "catalogue_id": "K-03",
+      "title": "Mid-serialize kill",
+      "execution_state": "NOT RUN",
+      "result": null,
+      "blocker": "No crash simulation harness",
+      "evidence_log": null,
+      "programme_execution_revision": "14733a5c120e4fdebbc225a2a5bf9643d4abe487",
+      "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+    }
+  ],
+  "schema": "TIER3_CATALOGUE_SCENARIO_MATRIX_CURRENT_STATE_v1",
+  "predecessor_matrix": {
+    "artefact_path": "reak-hardening/phase3/evidence/plan-conformant-2026-10-03/catalogue-scenario-matrix.json",
+    "sha256": "828af203aa1def6d3bf10d4feefccb16e36320b0fa07e115d1f0b573485cd48d",
+    "preservation": "IMMUTABLE_TIER3_ORIGINAL"
+  },
+  "promotion": {
+    "terminal": "QK-TRANCHE-01-CANONICAL-PROMOTION",
+    "tranche_execution": "QK-TRANCHE-01",
+    "promoted_catalogue_ids": [
+      "P-01",
+      "P-02"
+    ],
+    "qk_tranche_commit": "c0f02680007f7ab6e9df86e7a59d78d55fbc4ea4",
+    "qk_bootstrap_commit": "deef3951661db62ca827f1b0d273cc9d05d91387",
+    "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8",
+    "evidence_root": "evidence/qk-tranche-01-2026-10-03",
+    "programme_promotion_commit": "2b952c9a5c51ac7493367a7ca841b56a3bebc328"
+  },
+  "programme_promotion_commit": "2b952c9a5c51ac7493367a7ca841b56a3bebc328"
+}
