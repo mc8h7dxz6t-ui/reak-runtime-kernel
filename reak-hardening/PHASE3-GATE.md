@@ -4,7 +4,7 @@
 
 **OPENED** (operator charter — programme phase authorized)
 
-**Adversarial review execution:** **NOT STARTED**
+**Adversarial review execution:** **STARTED** (operator Tier 3 instruct + kickoff artefact committed on execution branch)
 
 This gate records **programme opening** of Phase 3 per [PHASE3-OPERATOR-CHARTER.md](PHASE3-OPERATOR-CHARTER.md). It does **not** assert qualification passed, production readiness, certification, customer deployment, adapters, providers, or cloud integration. Phase 2B remains **CONNECTED** ([PHASE2B-GATE.md](PHASE2B-GATE.md)).
 
@@ -45,3 +45,13 @@ This gate records **programme opening** of Phase 3 per [PHASE3-OPERATOR-CHARTER.
 ## Stop
 
 Do not treat **OPENED** as **COMPLETE**. Phase 3 completion criteria are defined separately when review milestones exist; no completion verdict is claimed here.
+
+
+## Tier 3 execution progress
+
+| Field | Value |
+| --- | --- |
+| Kickoff artefact | [phase3/evidence/tier3-execution-kickoff-2026-10-03.md](phase3/evidence/tier3-execution-kickoff-2026-10-03.md) |
+| Execution branch | tier3-plan-conformant-execution |
+| Adversarial row | **STARTED** (kickoff commit) |
+| Programme completion | **Not claimed** |
