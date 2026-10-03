@@ -1,0 +1,59 @@
+{
+  "schema": "PHASE3_FINAL_CLOSURE_ADJUDICATION_v1",
+  "terminal": "PHASE3-FINAL-CLOSURE-ADJUDICATION",
+  "stop_after": "PHASE3-FINAL-CLOSURE-ADJUDICATION",
+  "generated_at_utc": "2026-10-03T23:30:00Z",
+  "mode": "READ_ONLY_ADJUDICATION",
+  "executor_subagent_id": "bc-2f42b86b-63ec-54ed-98af-d860cb432a93",
+  "charter": {
+    "anchor_revision": "e2d36a6f9401cee0389b4d0c5b09c3d9f43df696",
+    "CHARTER_NORMATIVE_DRIFT": false,
+    "drift_notes": "test_plan_sha256 at execution branch matches charter pin; programme HEAD advanced on tier3-plan-conformant-execution as authorized execution lane"
+  },
+  "remote_parity": {
+    "branch": "tier3-plan-conformant-execution",
+    "LOCAL_HEAD": "b5f449fab8c314926fa4ebe3311b00bbd6271e9a",
+    "REMOTE_HEAD": null,
+    "PUSH_ATTEMPTED": true,
+    "PUSH_RESULT": "FAIL",
+    "REMOTE_PARITY": false,
+    "REMOTE_PARITY_BLOCKS_SCIENTIFIC_CLOSURE": false,
+    "OPERATIONAL_FREEZE": true,
+    "reason": "origin is preservation bundle (refs/heads/main @ e2d36a6 only); tier3-plan-conformant-execution not present on remote"
+  },
+  "programme": {
+    "PROGRAMME_HEAD_BEFORE": "b5f449fab8c314926fa4ebe3311b00bbd6271e9a",
+    "branch": "tier3-plan-conformant-execution",
+    "reak_revision": "65cea8f8921909bd44b970d1a69b2da362d7a4a8"
+  },
+  "tranche_reviews": {
+    "QK-T01": {
+      "verdict": "PROMOTE_PASS",
+      "store": "docs/reak-hardening/QK_TRANCHE_01_CANONICAL_PROMOTION.json"
+    },
+    "QK-T02": {
+      "verdict": "PROMOTE_PASS",
+      "advisory": "terminal_summary_digest_drift"
+    },
+    "QK-T03": {
+      "verdict": "PROMOTE_PASS"
+    },
+    "QK-T04": {
+      "verdict": "PROMOTE_PASS"
+    }
+  },
+  "closure_decision": "CLOSE_PHASE3_WITH_LIMITATIONS",
+  "authorization_flags": {
+    "PHASE3_COMPLETE": true,
+    "PHASE4_AUTHORIZED": false,
+    "CONSEQUENCE_II_COMPLETE": false
+  },
+  "limitations": [
+    "Majority of catalogue rows promoted from Qualification Kernel with Tier-3-original NOT_RUN lineage",
+    "Four rows (P-03,P-04,C-01,C-03) from pre-QK historical hostile integration log",
+    "Remote preservation bundle does not mirror execution branch HEAD",
+    "QK-T02 TERMINAL_SUMMARY manifest digest drift preserved as advisory"
+  ],
+  "claim_evidence_matrix_ref": "docs/reak-hardening/PHASE3_CLAIM_EVIDENCE_MATRIX.json",
+  "blockers_ref": "docs/reak-hardening/PHASE3_CLOSURE_BLOCKERS.json"
+}

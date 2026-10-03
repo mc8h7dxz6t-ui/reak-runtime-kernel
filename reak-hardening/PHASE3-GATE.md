@@ -54,5 +54,8 @@ Do not treat **OPENED** as **COMPLETE**. Phase 3 completion criteria are defined
 | Kickoff artefact | [phase3/evidence/tier3-execution-kickoff-2026-10-03.md](phase3/evidence/tier3-execution-kickoff-2026-10-03.md) |
 | Execution branch | tier3-plan-conformant-execution |
 | Adversarial row | **STARTED** (kickoff commit) |
-| Programme completion | **Not claimed** |
+| Programme completion | **CLOSED_WITH_LIMITATIONS** (2026-10-03) |
 | Plan-conformant catalogue commit | `9d9d4307a84dbb088a1180cc4b10449b59683959` |
+| Closure adjudication evidence | [phase3/evidence/phase3-final-closure-adjudication-2026-10-03/](phase3/evidence/phase3-final-closure-adjudication-2026-10-03/) |
+| `PHASE3_COMPLETE` | **true** (`CLOSE_PHASE3_WITH_LIMITATIONS`) |
+| `PHASE4_AUTHORIZED` | **false** |

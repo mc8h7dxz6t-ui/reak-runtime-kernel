@@ -1,0 +1,35 @@
+{
+  "schema": "PHASE3_CLOSURE_EVIDENCE_MANIFEST_v1",
+  "finality": {
+    "bundle_sealed": true,
+    "reference_only": true,
+    "mutations_forbidden": true
+  },
+  "references": [
+    {
+      "label": "tier3_original_matrix",
+      "path": "reak-hardening/phase3/evidence/plan-conformant-2026-10-03/catalogue-scenario-matrix.json",
+      "sha256": "828af203aa1def6d3bf10d4feefccb16e36320b0fa07e115d1f0b573485cd48d"
+    },
+    {
+      "label": "current_state_matrix",
+      "path": "reak-hardening/phase3/evidence/current-state/catalogue-scenario-matrix.json",
+      "sha256": "cf360a789a02c5fb29d6d8322c3b4f3776c0a247e9d81a42ed5d35f1b31b2728"
+    },
+    {
+      "label": "qk_t04_promotion",
+      "path": "reak-hardening/phase3/evidence/qk-tranche-04-canonical-promotion-2026-10-03/promotion-record.json"
+    },
+    {
+      "label": "pre_qk_hostile",
+      "path": "evidence/tier3-hostile-integration.log",
+      "note": "programme-relative; external copy under tier3-plan-conformant-execution/evidence/"
+    }
+  ],
+  "store_deliverables": [
+    "docs/reak-hardening/PHASE3_FINAL_CLOSURE_ADJUDICATION.json",
+    "docs/reak-hardening/PHASE3_CLAIM_EVIDENCE_MATRIX.json",
+    "docs/reak-hardening/PHASE3_CLOSURE_BLOCKERS.json",
+    "docs/reak-hardening/PHASE3_CLOSURE_RECORD.json"
+  ]
+}
